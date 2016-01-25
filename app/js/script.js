@@ -20,18 +20,26 @@ $(document).ready(function(){
 	/* ###### init stickUp  ######*/
 	/* ###### bower i sticky  ######*/
 	/*$("#sticker").sticky({topSpacing:0});*/
+$('.main-menu-toggle').click(function(){
+	$('.header-mainMenu-elem').slideToggle()
+})
 
 
-	/* ###### init owl-carousel  ######*/
-	/* ###### bower i owlcar ######*/
-	// $("#owl-example").owlCarousel({
-	//  	items : 1,
-	//  	autoHeight : true,
-	//  	pagination : false,
-	//  	autoPlay : true,
-	//  	singleItem:true
-	//  	}
-	//  ); 	
+	$(".slider-proj-main").owlCarousel({
+	 	items : 4,
+	 	pagination : false,
+	 	autoPlay : true,
+	 	}
+	 ); 
+	$(".slider-proj-mainEl-img").owlCarousel({
+	 	items : 1,
+	 	autoHeight : true,
+	 	pagination : false,
+	 	autoPlay : false,
+	 	singleItem:true
+	 	}
+	 ); 
+		
 
 	/* ###### init validate form  ######*/
 	/* ###### bower i jquery-validation ######*/

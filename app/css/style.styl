@@ -6,7 +6,7 @@
 
 border-box-html()
 fluid-media()
-rupture.scale = 0 400px 600px 780px 960px 1300px
+rupture.scale = 0 400px 600px 780px 1050px 1200px
 rupture.scale-names = 'xs' 'sm' 'm' 'l' 'xl' 'hd'
 jeet.gutter = 1
 
@@ -49,6 +49,8 @@ ul
 	tshadow(white)
 
 .header-slogan 
+	+below(1050px)
+		display none
 	font-size 18px
 	color braun
 	font(zopa)
@@ -85,11 +87,22 @@ ul
 
 .header-mainMenu
 	width 100%
-	background green
+	background dark-green
+	ul
+		margin 0px
  
 .header-mainMenu-elem
+	+below(780px)
+		display none
 	flex(between)
 	a
+		+below(1050px)
+			font-size 12px
+		+below(780px)
+			font-size 18px
+			display block
+			text-align center
+			padding 5px
 		color white
 	li
 		list-style none
@@ -103,6 +116,11 @@ ul
 	background-position: center;
 .main-baner-left
 	col(1/2)
+	+below(960px)
+		col(1)
+		img 
+			margin 0 auto
+			width auto
 .main-baner-cloud
 	flex(mid)
 	align-items flex-start
@@ -138,11 +156,28 @@ ul
 	font-weight bold
 	color: #333333;
 	width 140px
+.main-baner-house
+	width 100%
+	max-height 285px
 .main-baner-right
 	col(1/2)
-
+	+below(960px)
+		col(1)
+		img 
+			margin 0 auto
+			width auto
+.main-menu-toggle
+	+below(780px)
+		display block
+		display flex
+		justify-content flex-end
+	color white
+	display none
+	&:hover
+		cursor pointer
+	
 .main-baner-srv 
-	flex(mid)
+	flex(between)
 	background rgba(255, 255, 255, 0.5)
 	padding 20px 10px
 	border-radius 5px
@@ -153,6 +188,8 @@ ul
 	color braun
 	margin-left 10px
 .main-baner-srv-item
+	+below(780px)
+		width 33%
 	flex(mid)
 
 .button-line
@@ -161,8 +198,18 @@ ul
 		display block
 		color braun
 	.container
+		+below(640px)
+			flex-wrap wrap
+			justify-content center
 		flex(between)
 		.button-line-item
+			+below(1050px)
+				height 55px
+			+below(640px)
+				height 55px
+				width 48%
+				margin-right 5px
+				margin-bottom 10px
 			flex(mid)
 			width 100%
 			gradient:#FFC26E #FF9B2E
@@ -213,9 +260,13 @@ ul
 		margin 0
 		padding-left 40px
 .content-text
+	+below(780px)
+		col(2/3)
 	col(3/4)
 .content-rightBaner
-	height 500px
+	+below(780px)
+		col(1/3)
+	height 535px
 	bgi('baner-sale.png')
 	background-size cover
 	col(1/4)
@@ -285,5 +336,187 @@ ul
 		display: inline-flex
 		margin-bottom 20px
 		box-shadow: 1px 3px 1px #03522B;
-	
 
+.text-button
+	img
+		display inline
+		margin-right 10px
+	padding 10px 30px
+	tshadow(black)
+	color white
+	background yellow
+	font-size 18px
+	border-radius 5px
+	display: inline-flex
+	margin-bottom 20px
+	box-shadow: 0px 3px 0px #845917;
+	margin 20px 0
+	flex(mid)
+	display: inline-flex;
+.slider-proj
+	margin-top 60px
+.slider-proj-title
+	font-size 30px
+	margin-bottom 20px
+	font-weight 500
+	font(ubuntu)
+//.slider-proj-main
+.slider-proj-mainEl
+	flex(mid)
+	flex-flow column
+	margin 0 10px
+.slider-proj-mainEl-img
+	img
+		width 100%
+.slider-proj-main-title
+	font-size 20px
+	font-weight 500
+	text-transform uppercase
+	margin-top 20px
+	margin-bottom 10px
+	color dark-green
+.slider-proj-main-var
+	flex(between)
+	width 100%
+.slider-proj-main-but
+	text-align center
+	padding 5px
+	border 1px solid dark-green
+	color dark-green
+	margin-top 10px
+	display block
+.slider-proj-main-char
+	
+.slider-proj-main-info
+	position relative
+	width 100%
+	padding 15px
+	background-color: #f7f7f7;
+
+.flex-mid	
+	flex(mid)
+
+.slider-proj-main-price
+	background-color: #ffbb52;
+	display: inline-flex;
+	padding 10px
+	font-size 14px
+	padding 5px 20px
+	position absolute
+	top -35px
+	left -10px
+	&:before
+		content ''
+		width: 0;
+		height: 0;
+		border-top: 10px solid #BF6A2B; 
+		border-left: 10px solid transparent;
+		position absolute
+		bottom -10px
+		left 0px
+		z-index 3000
+
+.form-lid
+	bgi('form-bg.png');
+	padding 30px 0px
+	margin-top 40px
+	input[type="checkbox"]
+		display:none;
+	input[type="checkbox"] + label span
+		display:inline-block;
+		width:31px;
+		height:31px;
+		margin:-1px 4px 0 0;
+		vertical-align:middle;
+		background:url(../img/chek-sprite.png);
+		cursor:pointer;
+	input[type="checkbox"]:checked + label span
+		background:url(../img/chek-sprite.png)
+		background-position-x: 32px
+
+
+//.container 
+.form-lid-title 
+	font-weight 500
+	font-size 28px
+	text-align center
+	text-transform uppercase
+	margin-bottom 30px
+.form-lid-left
+	+below(780px)
+		width 30%
+	width 20% 
+.form-lid-left-checkbox
+	margin-bottom 10px 
+.form-lid-right
+	+below(780px)
+		width 30%
+	width 20%
+	form
+		flex(mid)
+		flex-flow column 
+	input
+		margin-bottom 10px
+		width 100%
+		border-radius 5px
+		box-shadow 0 0 0
+		border 0px
+		padding 10px
+		border-style: solid;
+		border-width: 1px;
+		border-color: #B1B1B1
+		border-radius: 5px;
+		background-color: rgb(255, 255, 255);
+		box-shadow: 0.5px 0.866px 4px 0px rgba(57, 51, 46, 0.4),inset 2.5px 4.33px 5px 0px rgba(49, 46, 43, 0.2);
+	button
+		border 0
+		background: #ff9c00;
+		color white
+		padding 10px 20px
+		width 100%
+		display block
+		border-radius 5px
+		box-shadow: 0px 3px 0px #845917;
+.form-lid-inputs
+	flex(mid)
+	
+.footer 
+	padding 40px 0
+	background #48924E
+	ul
+		padding 0
+		margin 0
+		li
+			+below(960px)
+				font-size 12px
+			list-style none
+			margin-bottom: 10px;
+			display: block;
+			a
+				color white
+.footer-el
+	col(1/5)
+	&:nth-child(2)
+		a
+			text-transform uppercase
+	&:nth-child(4)
+		+below(960px)
+			font-size 12px
+		color white
+		div
+			margin-bottom 10px
+	&:nth-child(5)
+		span
+			color white
+			font-size 14px
+			text-decoration underline
+//.container 
+.footer-wraper
+	flex(between)
+	align-items flex-start
+.footer-phone
+	+below(960px)
+		font-size 18px
+	font-size 28px
+	font-weight 500
+	color white

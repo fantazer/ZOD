@@ -8,6 +8,7 @@
     <!--build:css css/vendor.css-->
     <link rel="stylesheet" href="bower/normalize.css/normalize.css"/>
     <link rel="stylesheet" href="bower/components-font-awesome/css/font-awesome.css"/>
+    <link rel="stylesheet" href="bower/owlcar/owl-carousel/owl.carousel.css"/>
     <link rel="stylesheet" href="css/style.css"/>
     <!--endbuild-->
     <link rel="stylesheet" href="http://webfonts.ru/import/ptsans.css"/>
@@ -40,6 +41,7 @@
   <!--header-m					-->
   <div class="header-mainMenu">
     <div class="container">
+      <div class="main-menu-toggle"><i class="fa fa-bars"></i></div>
       <ul class="header-mainMenu-elem">
         <li> <a href="#">Готовые проекты</a></li>
         <li> <a href="#">наши плюсы</a></li>
@@ -61,7 +63,7 @@
         <div class="main-baner-cloud">
           <div class="main-baner-figure">проекты из <span class="cloud-big-text">бревна</span></div>
           <div class="main-baner-text">ручной рубки</div>
-        </div><img src="img/baner-house-left.png" alt=""/>
+        </div><img src="img/baner-house-left.png" alt="" class="main-baner-house"/>
         <div class="main-baner-button"> <a href="#"><img src="img/icon-house.png" alt=""/>
             <div class="main-baner-buttontext">каталог проектов</div></a></div>
         <div class="main-baner-srv">
@@ -81,9 +83,8 @@
         <div class="main-baner-cloud">
           <div class="main-baner-figure">проекты из <span class="cloud-big-text">бруса</span></div>
           <div class="main-baner-text">клееный брус сухой</div>
-        </div><img src="img/baner-house-right.png" alt=""/>
-        <div class="main-baner-button"> <a href="#"><img src="img/icon-house.png" alt=""/>
-            <div class="main-baner-buttontext">каталог проектов</div></a></div>
+        </div><img src="img/baner-house-right.png" alt="" class="main-baner-house"/>
+        <div class="main-baner-button"> <a href="#"><img src="img/icon-house.png" alt=""/><span>каталог проектов</span></a></div>
         <div class="main-baner-srv">
           <div class="main-baner-srv-item"> <img src="img/icon-instrum.png" alt=""/>
             <div class="main-baner-srv-text">Собственное производство</div>
@@ -121,7 +122,7 @@
           <li>сухое оцилиндрованное бревно </li>
         </ul>
         <p>Наша компания обладает обширной сырьевой и производственной базой в Вологодской и Архангельской областях. Собственные лесные угодья в северных широтах страны позволяют нам тщательно сортировать и отбирать только качественный материал для строительства домов.</p>
-        <p>Вологодское зодчество – строительная компания полного цикла. Наличие в штате квалифицированных специалистов широкого профиля позволяет выполнять строительство дома «под ключ» без привлечения сторонних подрядчиков. Комплексная работа компании над проектом экономит ресурсы заказчика, сокращает сроки выполнения работ и позволяет нам гарантировать их качество.  <a href="#">Читать подробнее</a></p>
+        <p>Вологодское зодчество – строительная компания полного цикла. Наличие в штате квалифицированных специалистов широкого профиля позволяет выполнять строительство дома «под ключ» без привлечения сторонних подрядчиков. Комплексная работа компании над проектом экономит ресурсы заказчика, сокращает сроки выполнения работ и позволяет нам гарантировать их качество.  <a href="#">Читать подробнее</a></p><a href="#" class="text-button"><img src="img/icon-twoflor.png" alt=""/><span>Смотреть готовые работы</span></a>
       </div>
       <!--Right banner-->
       <div class="content-rightBaner">
@@ -137,10 +138,191 @@
       </div>
     </div>
   </div>
+  <!--slider-in-slider-->
+  <div class="slider-proj">
+    <div class="container">
+      <div class="slider-proj-title">Новые проекты</div>
+      <div class="slider-proj-main">
+        <div class="slider-proj-mainEl">
+          <div class="slider-proj-mainEl-img"><img src="img/item-house-1.png" alt=""/><img src="img/item-house-1.png" alt=""/><img src="img/item-house-1.png" alt=""/>
+          </div>
+          <div class="slider-proj-main-info">
+            <div class="slider-proj-main-price">от 200 тыс руб</div>
+            <div class="slider-proj-main-title">дом из бруса 80м <sup>2</sup></div>
+            <div class="slider-proj-main-char">
+              <div class="slider-proj-main-var"><span>Общая площадь</span><span>80м<sup>2</sup></span></div>
+              <div class="slider-proj-main-var"><span>Жилая площадь</span><span>80м<sup>2</sup></span></div>
+              <div class="slider-proj-main-var"><span>Срок строительства</span><span>10 мес</span></div><a href="#" class="slider-proj-main-but">Подробная смета</a>
+            </div>
+          </div>
+        </div>
+        <div class="slider-proj-mainEl">
+          <div class="slider-proj-mainEl-img"><img src="img/item-house-1.png" alt=""/><img src="img/item-house-1.png" alt=""/><img src="img/item-house-1.png" alt=""/>
+          </div>
+          <div class="slider-proj-main-info">
+            <div class="slider-proj-main-price">от 200 тыс руб</div>
+            <div class="slider-proj-main-title">дом из бруса 80м <sup>2</sup></div>
+            <div class="slider-proj-main-char">
+              <div class="slider-proj-main-var"><span>Общая площадь</span><span>80м<sup>2</sup></span></div>
+              <div class="slider-proj-main-var"><span>Жилая площадь</span><span>80м<sup>2</sup></span></div>
+              <div class="slider-proj-main-var"><span>Срок строительства</span><span>10 мес</span></div><a href="#" class="slider-proj-main-but">Подробная смета</a>
+            </div>
+          </div>
+        </div>
+        <div class="slider-proj-mainEl">
+          <div class="slider-proj-mainEl-img"><img src="img/item-house-1.png" alt=""/><img src="img/item-house-1.png" alt=""/><img src="img/item-house-1.png" alt=""/>
+          </div>
+          <div class="slider-proj-main-info">
+            <div class="slider-proj-main-price">от 200 тыс руб</div>
+            <div class="slider-proj-main-title">дом из бруса 80м <sup>2</sup></div>
+            <div class="slider-proj-main-char">
+              <div class="slider-proj-main-var"><span>Общая площадь</span><span>80м<sup>2</sup></span></div>
+              <div class="slider-proj-main-var"><span>Жилая площадь</span><span>80м<sup>2</sup></span></div>
+              <div class="slider-proj-main-var"><span>Срок строительства</span><span>10 мес</span></div><a href="#" class="slider-proj-main-but">Подробная смета</a>
+            </div>
+          </div>
+        </div>
+        <div class="slider-proj-mainEl">
+          <div class="slider-proj-mainEl-img"><img src="img/item-house-1.png" alt=""/><img src="img/item-house-1.png" alt=""/><img src="img/item-house-1.png" alt=""/>
+          </div>
+          <div class="slider-proj-main-info">
+            <div class="slider-proj-main-price">от 200 тыс руб</div>
+            <div class="slider-proj-main-title">дом из бруса 80м <sup>2</sup></div>
+            <div class="slider-proj-main-char">
+              <div class="slider-proj-main-var"><span>Общая площадь</span><span>80м<sup>2</sup></span></div>
+              <div class="slider-proj-main-var"><span>Жилая площадь</span><span>80м<sup>2</sup></span></div>
+              <div class="slider-proj-main-var"><span>Срок строительства</span><span>10 мес</span></div><a href="#" class="slider-proj-main-but">Подробная смета</a>
+            </div>
+          </div>
+        </div>
+        <div class="slider-proj-mainEl">
+          <div class="slider-proj-mainEl-img"><img src="img/item-house-1.png" alt=""/><img src="img/item-house-1.png" alt=""/><img src="img/item-house-1.png" alt=""/>
+          </div>
+          <div class="slider-proj-main-info">
+            <div class="slider-proj-main-price">от 200 тыс руб</div>
+            <div class="slider-proj-main-title">дом из бруса 80м <sup>2</sup></div>
+            <div class="slider-proj-main-char">
+              <div class="slider-proj-main-var"><span>Общая площадь</span><span>80м<sup>2</sup></span></div>
+              <div class="slider-proj-main-var"><span>Жилая площадь</span><span>80м<sup>2</sup></span></div>
+              <div class="slider-proj-main-var"><span>Срок строительства</span><span>10 мес</span></div><a href="#" class="slider-proj-main-but">Подробная смета</a>
+            </div>
+          </div>
+        </div>
+        <div class="slider-proj-mainEl">
+          <div class="slider-proj-mainEl-img"><img src="img/item-house-1.png" alt=""/><img src="img/item-house-1.png" alt=""/><img src="img/item-house-1.png" alt=""/>
+          </div>
+          <div class="slider-proj-main-info">
+            <div class="slider-proj-main-price">от 200 тыс руб</div>
+            <div class="slider-proj-main-title">дом из бруса 80м <sup>2</sup></div>
+            <div class="slider-proj-main-char">
+              <div class="slider-proj-main-var"><span>Общая площадь</span><span>80м<sup>2</sup></span></div>
+              <div class="slider-proj-main-var"><span>Жилая площадь</span><span>80м<sup>2</sup></span></div>
+              <div class="slider-proj-main-var"><span>Срок строительства</span><span>10 мес</span></div><a href="#" class="slider-proj-main-but">Подробная смета</a>
+            </div>
+          </div>
+        </div>
+        <div class="slider-proj-mainEl">
+          <div class="slider-proj-mainEl-img"><img src="img/item-house-1.png" alt=""/><img src="img/item-house-1.png" alt=""/><img src="img/item-house-1.png" alt=""/>
+          </div>
+          <div class="slider-proj-main-info">
+            <div class="slider-proj-main-price">от 200 тыс руб</div>
+            <div class="slider-proj-main-title">дом из бруса 80м <sup>2</sup></div>
+            <div class="slider-proj-main-char">
+              <div class="slider-proj-main-var"><span>Общая площадь</span><span>80м<sup>2</sup></span></div>
+              <div class="slider-proj-main-var"><span>Жилая площадь</span><span>80м<sup>2</sup></span></div>
+              <div class="slider-proj-main-var"><span>Срок строительства</span><span>10 мес</span></div><a href="#" class="slider-proj-main-but">Подробная смета</a>
+            </div>
+          </div>
+        </div>
+        <div class="slider-proj-mainEl">
+          <div class="slider-proj-mainEl-img"><img src="img/item-house-1.png" alt=""/><img src="img/item-house-1.png" alt=""/><img src="img/item-house-1.png" alt=""/>
+          </div>
+          <div class="slider-proj-main-info">
+            <div class="slider-proj-main-price">от 200 тыс руб</div>
+            <div class="slider-proj-main-title">дом из бруса 80м <sup>2</sup></div>
+            <div class="slider-proj-main-char">
+              <div class="slider-proj-main-var"><span>Общая площадь</span><span>80м<sup>2</sup></span></div>
+              <div class="slider-proj-main-var"><span>Жилая площадь</span><span>80м<sup>2</sup></span></div>
+              <div class="slider-proj-main-var"><span>Срок строительства</span><span>10 мес</span></div><a href="#" class="slider-proj-main-but">Подробная смета</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flex-mid"><a href="#" class="text-button"><img src="img/icon-twoflor.png" alt=""/><span>Смотреть все проекты</span></a></div>
+  <div class="form-lid">
+    <div class="container">
+      <div class="form-lid-title">Отправьте заявку  и мы <br> разработаем Ваш проект бесплатно</div>
+      <div class="form-lid-inputs">
+        <div class="form-lid-left">
+          <div class="form-lid-left-checkbox">
+            <input type="checkbox" id="c1"/>
+            <label for="c1"> <span></span>
+              <text>Дом из бруса</text>
+            </label>
+          </div>
+          <div class="form-lid-left-checkbox">
+            <input type="checkbox" id="c2"/>
+            <label for="c2"> <span></span>
+              <text>Дом из бревна</text>
+            </label>
+          </div>
+          <div class="form-lid-left-checkbox">
+            <input type="checkbox" id="c3"/>
+            <label for="c3"> <span></span>
+              <text>баня</text>
+            </label>
+          </div>
+        </div>
+        <div class="form-lid-right">
+          <form action="">
+            <input type="text" placeholder=" Ваше имя "/>
+            <input type="text" placeholder=" Ваш телефон "/>
+            <button>Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--footer-->
+  <div class="footer">
+    <div class="container">
+      <div class="footer-wraper">
+        <div class="footer-el"><img src="img/footer-logo.png" alt=""/></div>
+        <div class="footer-el">
+          <ul>
+            <li><a href="#">о компании</a></li>
+            <li><a href="#">Наши плюсы</a></li>
+            <li><a href="#">О производстве</a></li>
+            <li><a href="#">Услуги</a></li>
+            <li><a href="#">Гарантии</a></li>
+          </ul>
+        </div>
+        <div class="footer-el">
+          <ul>
+            <li><a href="#">Дома из бревна</a></li>
+            <li><a href="#">Дома из бруса</a></li>
+            <li><a href="#">Бани из бревна</a></li>
+            <li><a href="#">Бани из бруса</a></li>
+          </ul>
+        </div>
+        <div class="footer-el">
+          <div>273984</div>
+          <div>г. Санкт-Петербург</div>
+          <div>ул. Подольская, д.42</div>
+          <div>офис: 356</div>
+        </div>
+        <div class="footer-el">
+          <div class="footer-phone">8 (812) 921-40-51</div><span>Заказать обратный звонок</span>
+        </div>
+      </div>
+    </div>
+  </div>
   <!--Include Footer-scripts-->
   <!--build:js scripts/combined.js-->
   <script src="bower/jquery/dist/jquery.js"></script>
-  <script src="bower/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="bower/owlcar/owl-carousel/owl.carousel.min.js"></script>
   <script src="js/script.js"></script>
   <!-- endbuild-->
 </body>

@@ -14,7 +14,7 @@ body
 					.main-baner-figure проекты из 
 						span.cloud-big-text бревна
 					.main-baner-text ручной рубки
-				img(src="img/baner-house-left.png", alt="")
+				img(src="img/baner-house-left.png", alt="").main-baner-house
 
 				.main-baner-button 
 					a(href="#")
@@ -33,12 +33,12 @@ body
 					.main-baner-figure проекты из 
 						span.cloud-big-text бруса
 					.main-baner-text клееный брус сухой
-				img(src="img/baner-house-right.png", alt="")
+				img(src="img/baner-house-right.png", alt="").main-baner-house
 
 				.main-baner-button 
 					a(href="#")
 						img(src="img/icon-house.png", alt="")
-						.main-baner-buttontext каталог проектов
+						span каталог проектов
 
 				.main-baner-srv
 					- each val in banerMainright
@@ -69,6 +69,11 @@ body
 				p Наша компания обладает обширной сырьевой и производственной базой в Вологодской и Архангельской областях. Собственные лесные угодья в северных широтах страны позволяют нам тщательно сортировать и отбирать только качественный материал для строительства домов.
 				p Вологодское зодчество – строительная компания полного цикла. Наличие в штате квалифицированных специалистов широкого профиля позволяет выполнять строительство дома «под ключ» без привлечения сторонних подрядчиков. Комплексная работа компании над проектом экономит ресурсы заказчика, сокращает сроки выполнения работ и позволяет нам гарантировать их качество.  
 					a(href="#") Читать подробнее
+
+				a.text-button(href="#")
+					img(src="img/icon-twoflor.png", alt="")
+					span Смотреть готовые работы
+
 			//Right banner
 			.content-rightBaner
 				.content-rightBaner-title Зимний лес со скидкой 
@@ -78,9 +83,104 @@ body
 					form(action="")
 						input(type="text" placeholder="Ваше имя")
 						input(type="text" placeholder="Ваш телефон")
-
 						button.content-rightBaner-button Получить скидку
+	
+	//slider-in-slider
+	.slider-proj
+		.container
+			.slider-proj-title Новые проекты
+			.slider-proj-main
+				- for (var i = 0; i < 8; i++)
+					.slider-proj-mainEl
+						.slider-proj-mainEl-img
+							- for (var j = 0; j < 3; j++)
+								img(src="img/item-house-1.png", alt="")
+						.slider-proj-main-info
+							.slider-proj-main-price от 200 тыс руб
+							.slider-proj-main-title дом из бруса 80м 
+								sup 2
+							.slider-proj-main-char
+								.slider-proj-main-var
+									span Общая площадь
+									span 80м
+										sup 2
+								.slider-proj-main-var
+									span Жилая площадь
+									span 80м
+										sup 2
+								.slider-proj-main-var
+									span Срок строительства
+									span 10 мес
+								a(href="#").slider-proj-main-but Подробная смета
 
+	.flex-mid
+		a.text-button(href="#")
+					img(src="img/icon-twoflor.png", alt="")
+					span Смотреть все проекты
+
+	
+	.form-lid
+		.container
+			.form-lid-title Отправьте заявку  и мы <br> разработаем Ваш проект бесплатно
+			.form-lid-inputs
+				.form-lid-left
+					.form-lid-left-checkbox
+						input(type="checkbox" )#c1
+						label(for="c1") 
+							span
+							text Дом из бруса
+					.form-lid-left-checkbox
+						input(type="checkbox" )#c2
+						label(for="c2") 
+							span
+							text Дом из бревна
+					.form-lid-left-checkbox
+						input(type="checkbox" )#c3
+						label(for="c3") 
+							span
+							text баня
+				.form-lid-right
+					form(action="")
+						input(type="text" placeholder=" Ваше имя ")
+						input(type="text" placeholder=" Ваш телефон ")
+						button Отправить
+	
+	//footer
+	.footer
+		.container
+			.footer-wraper
+				.footer-el
+					img(src="img/footer-logo.png", alt="")
+				.footer-el
+					ul
+						li
+							a(href="#") о компании
+						li
+							a(href="#") Наши плюсы
+						li
+							a(href="#") О производстве
+						li
+							a(href="#") Услуги
+						li
+							a(href="#") Гарантии
+				.footer-el
+					ul
+						li
+							a(href="#") Дома из бревна
+						li
+							a(href="#") Дома из бруса
+						li
+							a(href="#") Бани из бревна
+						li
+							a(href="#") Бани из бруса
+				.footer-el
+					div 273984
+					div г. Санкт-Петербург
+					div ул. Подольская, д.42
+					div офис: 356
+				.footer-el
+					.footer-phone 8 (812) 921-40-51
+					span Заказать обратный звонок
 
 
 	include ./block_html/footer.jade 
