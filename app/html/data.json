@@ -1,8 +1,19 @@
  {
-  "menu":[
-  	{"item": "Главная"},
-  	{"item": "Новости"},
-  	{"item": "Галерея"},
-  	{"item": "Контакты"}
+  "banerMainleft":[
+  	{"icon": "icon-forest.png","text":"Ценнейший северный лес"},
+  	{"icon": "icon-clock.png","text":"Оптимизация сроков и стоимости"},
+  	{"icon": "icon-instrum.png","text":"Опытные русские мастера"}
+  ],
+  "banerMainright":[
+  	{"icon": "icon-instrum.png","text":"Собственное производство"},
+  	{"icon": "icon-sale.png","text":"Строительство с предоплатой 30%"},
+  	{"icon": "icon-sert.png","text":"Официальный договор с гарантией до 25 лет"}
+  ],
+  "buttonline":[
+    {"icon": "icon-calc.png","text":"Калькулятор стоимости строительства"},
+    {"icon": "icon-plan.png","text":"Отправить свой проект на просчет"},
+    {"icon": "icon-man.png","text":"Получить консультацию специалиста бесплатно"},
+    {"icon": "icon-build.png","text":"Подобрать готовый проект бесплатно"}
   ]
+  
 }

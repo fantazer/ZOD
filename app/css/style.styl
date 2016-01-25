@@ -1,8 +1,8 @@
-@import "variable/*"
 @import "icon/*"
 @import 'axis'
 @import 'jeet'
 @import 'rupture'
+@import "variable/*"
 
 border-box-html()
 fluid-media()
@@ -13,6 +13,277 @@ jeet.gutter = 1
 wraper
 	center(1200px)
 	padding 20px
-
 body
-	font-family 'Open Sans'
+	font(ubuntu)
+
+a
+	text-decoration: none!important
+
+ul
+	padding 0
+
+.dotted
+	border-bottom 1px dotted braun
+	
+.container
+	center(1200px)
+	padding 10px
+
+.header 
+	bgi('header-bg.png')
+	padding 10px 0
+
+.header-info 
+	flex(between)
+
+
+.header-info-left
+	flex(mid)
+
+
+.header-logoBlock-text 
+	font-size 14px
+	font-weight 700
+	color: #5b3d0c;
+	margin-top 10px
+	tshadow(white)
+
+.header-slogan 
+	font-size 18px
+	color braun
+	font(zopa)
+	margin-left 80px 
+	tshadow(white)
+
+
+.header-contact-number 
+	font-size 28px
+	font(pt)
+	font-weight bold
+
+.header-contact-callback 
+	display block
+	color white
+	width 100%
+	background green
+	text-align center
+	padding 5px
+	text-transform uppercase
+	font-size 14px
+	font(pt)
+	border-radius 3px	
+	font-weight bold
+	margin 5px 0 
+
+.header-contact-text 
+	font-size 16px
+	font(ubuntu)
+	font-weight 400
+	text-align center
+	color braun
+	tshadow(white)
+
+.header-mainMenu
+	width 100%
+	background green
+ 
+.header-mainMenu-elem
+	flex(between)
+	a
+		color white
+	li
+		list-style none
+		text-transform uppercase
+		color white
+		font-weight bold
+
+.main-baner
+	bgi("main-banner.png")
+	background-size cover
+	background-position: center;
+.main-baner-left
+	col(1/2)
+.main-baner-cloud
+	flex(mid)
+	align-items flex-start
+	margin-top 75px
+.main-baner-figure
+	font(pt)
+	tshadow(grey)
+	flex(mid)
+	background yellow
+	padding 25px
+	background-image: -moz-linear-gradient( 66deg, rgb(236,153,33) 0%, rgb(255,174,0) 100%);
+	background-image: -webkit-linear-gradient( 66deg, rgb(236,153,33) 0%, rgb(255,174,0) 100%);
+	background-image: -ms-linear-gradient( 66deg, rgb(236,153,33) 0%, rgb(255,174,0) 100%);
+	box-shadow: 1.5px 2.598px 0px 0px rgba(49, 46, 43, 0.15);
+	width: 175px;
+	height: 95px;	
+	border-radius 55px 5px
+	flex-flow column
+	align-items flex-start
+	color white
+	font-size 14px
+	text-transform uppercase
+	
+.cloud-big-text
+	font-size 36px
+	text-transform uppercase
+	margin-top -10px
+	
+.main-baner-text
+	tshadow(white)
+	margin-left 20px
+	text-transform uppercase
+	font-weight bold
+	color: #333333;
+	width 140px
+.main-baner-right
+	col(1/2)
+
+.main-baner-srv 
+	flex(mid)
+	background rgba(255, 255, 255, 0.5)
+	padding 20px 10px
+	border-radius 5px
+.main-baner-srv-text
+	font(ubuntu)
+	font-size 14px
+	font-weight bold 
+	color braun
+	margin-left 10px
+.main-baner-srv-item
+	flex(mid)
+
+.button-line
+	margin 30px 0
+	a
+		display block
+		color braun
+	.container
+		flex(between)
+		.button-line-item
+			flex(mid)
+			width 100%
+			gradient:#FFC26E #FF9B2E
+			padding 10px 20px
+			margin-right 20px
+			font-size 12px
+			border-radius 5px
+			box-shadow: 3px 3px 1px #A55F13;
+			&:hover
+				cursor pointer
+			&:last-child
+				margin-right 0
+			img
+				margin-right 20px
+.content
+	h1
+		font(ubuntu)
+		font-size 30px
+		font-weight 500
+		color #333333
+		margin-top 0
+	p,li
+		font-size 16px
+		font-weight 400
+		color #333333
+		line-height 25px
+	li:before
+		content: ""
+		position absolute
+		width 5px
+		height 5px
+		background green
+		border-radius 50%
+		left -13px
+		top 7px
+	li
+		list-style none
+		position relative
+	p
+		text-indent 20px
+		margin 5px
+		padding 5px
+		a
+			color #3687DE
+			border-bottom 1px dotted #3687DE
+	ul
+		padding 0
+		margin 0
+		padding-left 40px
+.content-text
+	col(3/4)
+.content-rightBaner
+	height 500px
+	bgi('baner-sale.png')
+	background-size cover
+	col(1/4)
+	padding 20px
+	display flex
+	flex-flow column
+	justify-content flex-end
+
+.content-rightBaner-button
+	border 0
+	background dark-green
+	color white
+	padding 10px 20px
+	width 80%
+	display block
+	border-radius 5px
+	box-shadow: 0px 3px 1px #03522B;
+	
+.content-rightBaner-form
+	form 
+		flex(mid)
+		flex-flow column
+	input
+		margin-bottom 10px
+		width 100%
+		border-radius 5px
+		box-shadow 0 0 0
+		border 0px
+		padding 10px
+		border-style: solid;
+		border-width: 1px;
+		border-color: #B1B1B1
+		border-radius: 5px;
+		background-color: rgb(255, 255, 255);
+		box-shadow: 0.5px 0.866px 4px 0px rgba(57, 51, 46, 0.4),inset 2.5px 4.33px 5px 0px rgba(49, 46, 43, 0.2);
+.content-rightBaner-title
+	color white
+	padding 10px
+	background rgba(34, 34, 34, 0.79)
+	font-size 20px
+	text-align center
+.big-text
+	width 100%
+	font-size 25px
+.content-rightBaner-date
+	text-align center
+	text-transform uppercase
+	font-size 12px
+	font-weight bold
+	margin 10px
+
+.main-baner-button
+	flex(mid)
+	justify-content flex-end
+	img
+		display inline
+		margin-right 10px
+	a
+		flex(mid)
+		tshadow(black)
+		text-transform uppercase
+		color white
+		background orange
+		padding 5px 10px
+		font-size 18px
+		border-radius 5px
+		display: inline-flex
+		margin-bottom 20px
+		box-shadow: 1px 3px 1px #03522B;
+	
+

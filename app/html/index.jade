@@ -1,24 +1,88 @@
 <!DOCTYPE html>
 html(lang="en")
-	//Include header
+	//Include header-scripts
 	include ./block_html/head.jade
 body
-	wraper
-		header
-		slider
-		.main-news
-			- for (var x = 0; x < 4; x++)
-				.main-news-items
-					.main-news-items-img
-					.main-news-items-title Новая статья
-					.main-news-items-text   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis veritatis, in, quasi a laudantium ea nobis blanditiis soluta quidem nesciunt delectus, vel cum amet! Dolore ex molestias assumenda explicabo repellendus laboriosam animi, maxime dolorem blanditiis, tempora ut maiores sequi. Neque iure sint quibusdam, vel veniam expedita optio, quaerat omnis assumenda.    				
-		.short-news
-			.short-news-left
-				- for (var y = 0; y < 4; y++)
-					.short-news-left-items
-						.short-news-left-items-title Главная новость
-						.short-news-left-items-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias blanditiis esse non nesciunt dicta corporis voluptates neque, veniam cum voluptate excepturi dolorem incidunt nam nihil rerum rem saepe voluptatum a.
-			.short-news-right
-				p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt facilis, dolore similique maiores? Doloribus, asperiores. Iusto debitis tempora velit repellat sed autem, quaerat commodi, necessitatibus soluta quos libero voluptatibus eum. Beatae quasi iure quam eos consequuntur nobis quo laudantium, placeat neque aliquam doloribus, quod nemo. Illum vel, quia laboriosam temporibus non repellat ipsa esse, totam quisquam sunt explicabo eaque? Voluptates, excepturi sit. Iste tempore deleniti, quia, perspiciatis architecto nihil, commodi vero corporis dolores soluta ad nesciunt amet similique, quos laboriosam aliquid voluptatum ut! Nihil delectus nisi tempora, eaque nostrum! Eveniet a minima, accusamus omnis libero ducimus perspiciatis! Nobis aperiam, mollitia.
-	//Include Footer
-	include ./block_html/script.jade
+	include ./block_html/header.jade
+	
+	//main_baner
+	.main-baner
+		.container
+			//main-baner-left
+			.main-baner-left
+				.main-baner-cloud
+					.main-baner-figure проекты из 
+						span.cloud-big-text бревна
+					.main-baner-text ручной рубки
+				img(src="img/baner-house-left.png", alt="")
+
+				.main-baner-button 
+					a(href="#")
+						img(src="img/icon-house.png", alt="")
+						.main-baner-buttontext каталог проектов
+
+				.main-baner-srv
+					- each val in banerMainleft
+						.main-baner-srv-item 
+							img(src="img/#{val['icon']}", alt="")
+							.main-baner-srv-text #{val['text']}
+
+			//main-baner-right
+			.main-baner-right
+				.main-baner-cloud
+					.main-baner-figure проекты из 
+						span.cloud-big-text бруса
+					.main-baner-text клееный брус сухой
+				img(src="img/baner-house-right.png", alt="")
+
+				.main-baner-button 
+					a(href="#")
+						img(src="img/icon-house.png", alt="")
+						.main-baner-buttontext каталог проектов
+
+				.main-baner-srv
+					- each val in banerMainright
+						.main-baner-srv-item 
+							img(src="img/#{val['icon']}", alt="")
+							.main-baner-srv-text #{val['text']}
+	
+	//button-line
+	.button-line
+		.container
+			- each val in buttonline
+				.button-line-item 
+					img(src="img/#{val['icon']}", alt="")
+					a(href="#").button-line-text #{val['text']} 
+
+	//content
+	.content
+		.container
+			//Text
+			.content-text
+				h1 О компании
+				p «Вологодское зодчество» - строительная компания, успешн работающая на рынке с 1998 года.Начиная свой путь в регионе, издавна славившимся мастерами деревянного зодчества, мы смогли сохранить вековые традиции строительного искусства и успешно освоить все новые технологии  деревянного домостроения.Наша компания специализируется на строительстве домов и бань из следующих материалов:
+				ul
+					li бревно ручной рубки
+					li клееный брус
+					li сухой профилированный брус
+					li сухое оцилиндрованное бревно 
+				p Наша компания обладает обширной сырьевой и производственной базой в Вологодской и Архангельской областях. Собственные лесные угодья в северных широтах страны позволяют нам тщательно сортировать и отбирать только качественный материал для строительства домов.
+				p Вологодское зодчество – строительная компания полного цикла. Наличие в штате квалифицированных специалистов широкого профиля позволяет выполнять строительство дома «под ключ» без привлечения сторонних подрядчиков. Комплексная работа компании над проектом экономит ресурсы заказчика, сокращает сроки выполнения работ и позволяет нам гарантировать их качество.  
+					a(href="#") Читать подробнее
+			//Right banner
+			.content-rightBaner
+				.content-rightBaner-title Зимний лес со скидкой 
+					span.big-text 1000 руб за куб.м!
+				.content-rightBaner-date Только до 28 февраля!
+				.content-rightBaner-form
+					form(action="")
+						input(type="text" placeholder="Ваше имя")
+						input(type="text" placeholder="Ваш телефон")
+
+						button.content-rightBaner-button Получить скидку
+
+
+
+	include ./block_html/footer.jade 
+	//Include Footer-scripts
+	include ./block_html/script.jade 

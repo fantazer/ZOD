@@ -33,7 +33,7 @@ function errorhandler() {
     // Send error to notification center with gulp-notify
     notify.onError({
         title: 'Compile Error',
-        message: 'Ошибка в Jade',
+        message: 'Ошибка в Jade или Stylus',
         // sound: true можно даже со звуком!
     }).apply(this, args);
 
@@ -83,7 +83,7 @@ gulp.task('stylus', function () {
     .pipe(stylus({
         use:[rupture(),axis(),jeet()]
         }))
-    .pipe(gulp.dest('./app/css/'))
+    .pipe(gulp.dest('./app/css/')).on('error', errorhandler)
 });
 
 //Source map
