@@ -520,3 +520,313 @@ ul
 	font-size 28px
 	font-weight 500
 	color white
+	
+.breadcrump
+	ul
+		display flex
+		a
+			color #333333
+			font-weight 400
+		li 
+			list-style none
+			margin-right 30px
+			position relative
+			&:after
+				content '/'
+				position absolute
+				right -20px
+			&:last-child
+				a
+					color #767676
+				&:after
+					content ' '
+					position absolute
+					right -20px
+
+//.catalog-head
+//.container
+.catalog-head-left
+	col(4/5)
+	display flex
+.catalog-head-left-text
+	padding 20px
+	p
+		font-weight 400
+		font-size 14px
+		line-height 25px
+
+.catalog-head-left-title
+	font-size 26px
+	font-weight 500
+//.catalog-head-right
+.catalog-head-right-block
+	col(1/5)
+	padding 10px
+	bgi('bg-catalog.png');
+	background-size cover
+	border-radius: 5px;
+	border: 1px solid #EAE9E9;
+	span
+		display block
+.catalog-head-right-big-title
+	font-size 20px
+	font-weight 700
+	text-transform uppercase
+.catalog-head-right-title
+	font-size 14px
+	font-weight 700
+	text-transform uppercase
+.catalog-head-right-text
+	font-size 14px
+	line-height 35px
+.catalog-head-right-textArrow
+	margin-bottom 30px
+	margin-top 15px
+	position relative
+	img 
+		position absolute
+		left 100px
+		top 10px
+.catalog-head-right-but
+	img
+		display inline
+		margin-right 10px
+	padding 10px 
+	tshadow(black)
+	color white
+	background yellow
+	font-size 14px
+	border-radius 5px
+	display: inline-flex
+	box-shadow: 0px 3px 0px #845917;
+	margin 10px 0
+	flex(mid)
+	display: inline-flex;
+	width 100%
+
+.cf
+	cf()
+	
+.catalog-lineFilter 
+	color white
+	background #5FA869
+	flex(between)
+	padding 0 20px
+	margin-top 20px
+.catalog-lineFilter-left 
+	display flex
+.catalog-lineFilter-left-el
+	&:first-child
+		margin-left 100px
+		text-transform uppercase
+	flex(mid)
+	padding 10px 30px 
+	span
+		margin 0 10px
+.catalog-lineFilter-trigle 
+	triangle:'down' 5px white
+.catalog-lineFilter-left-active
+	background dark-green
+//.catalog-lineFilter-right 
+
+//.catalog-main 
+.catalog-main-left-wrap
+	background #ececec
+	padding 20px 15px
+.catalog-main-left
+	col(1/4) 
+.catalog-main-left-tile 
+	font-size 18px
+	font-weight bold
+	margin-bottom 15px
+.catalog-main-left-togBut
+	border-radius 10px 
+	border: 1px solid darkgrey;
+	flex(between)
+.catalog-main-left-togBut-left
+	height 35px
+	font-weight 500
+	font-size 14px
+	font(ubuntu) 
+	flex(mid)
+	width 100%
+	padding 15px 0
+	gradient #D38C00 #F0AE3D
+	border-radius: 10px 0px 0px 10px;
+	box-shadow: inset 2px 6px 6px #845D06
+	img
+		margin-right 15px
+.catalog-main-left-togBut-right 
+	height 35px
+	font-weight 500
+	font-size 14px
+	font(ubuntu)
+	flex(mid)
+	width 100%
+	padding 15px 0
+	gradient #F9C24D #F38218
+	border-radius: 0px  10px 10px  0px;
+	box-shadow: inset 0px 1px 4px white
+	img
+		margin-right 15px
+
+.catalog-main-left-divider
+	margin 15px 0
+	height 2px
+	width 100%
+	background #d9d9d9
+	border-bottom 1px solid white
+	display block
+.catalog-main-left
+	input[type="checkbox"]
+		display:none;
+	input[type="checkbox"] + label span
+		display:inline-block;
+		width:22px;
+		height:22px;
+		margin:-1px 4px 0 0;
+		vertical-align:middle;
+		background:url(../img/chek-sprite-orange.png);
+		cursor:pointer;
+	input[type="checkbox"]:checked + label span
+		background:url(../img/chek-sprite-orange.png)
+		background-position-x: 22px
+.catalog-main-left-inputs
+	margin-left 30px
+	margin-bottom 10px
+	text
+		font-size 14px
+		font-weight 400
+.catalog-main-right 
+	col(3/4)
+	
+.catalog-main-left-baner
+	margin-top 20px
+	img
+		width 100%
+
+.catalog-main-el 
+	col(1/2,cycle:2)
+	color #333333
+	padding-bottom: 10px;
+	border: 1px solid #ECECEC;
+	margin-bottom 10px
+.catalog-main-el-top
+	display flex 
+.catalog-main-el-top-left 
+	col(1/2)
+	
+.catalog-main-el-top-right
+	col(1/2) 
+	padding 10px
+.catalog-main-el-top-right-title 
+	font-weight 500
+	font-size 24px
+	margin-bottom 15px
+	color black
+.catalog-main-el-top-right-text 
+	font-size 14px
+	margin-bottom 15px
+.catalog-main-el-info
+	margin-bottom 5px
+	span
+		font-size 14px
+	img
+		margin-right 15px 
+		display inline-block
+.catalog-main-el-bot
+	padding-left 10px 
+	font-size 14px
+	
+.catalog-main-right-footer
+	flex(between) 
+	margin 30px 0px
+.catalog-main-right-footer-left
+	color #333333
+	font-size 14px 
+	div
+		margin-top 10px
+	a
+		color blue
+		margin-left 10px
+		border-bottom 1px dotted blue
+.catalog-main-right-footer-right
+	div
+		font-size 14px
+		color: #7a7a7a;
+.catalog-right-pagination 
+	display flex
+	justify-content flex-end
+	margin-top 10px
+.catalog-right-pagination-el 
+	padding 8px 10px
+	border 1px solid #262525
+	margin-left 10px
+	color #262525!important
+	
+.pagination-active
+	border 1px solid #7a7a7a!important
+	color: #7a7a7a!important; 
+.catalog-form-right
+	form 
+			flex(mid)
+			flex-flow column
+		input
+			margin-bottom 10px
+			width 100%
+			border-radius 5px
+			box-shadow 0 0 0
+			border 0px
+			padding 10px
+			border-style: solid;
+			border-width: 1px;
+			border-color: #B1B1B1
+			border-radius: 5px;
+			background-color: rgb(255, 255, 255);
+			box-shadow: 0.5px 0.866px 4px 0px rgba(57, 51, 46, 0.4),inset 2.5px 4.33px 5px 0px rgba(49, 46, 43, 0.2);
+
+.catalog-form 
+	padding 30px
+	bgi('bg-form.png');
+	
+//.container 
+.catalog-form-title 
+	text-align center
+	font-size 24px
+	font-weight 500
+	margin-bottom 20px
+.catalog-form-wraper
+	flex(mid)
+.catalog-form-left 
+	width 50%
+	margin-right 50px
+.catalog-form-right
+	width 25% 
+.catalog-form-right-file
+	flex(between)
+	width 100%
+	margin 10px 20px
+	span
+		font-size 14px 
+.catalog-form-button
+	but-flat(#EA9720,white,100%)
+	margin-top 10px
+.catalog-form-right-file-but
+	but-flat(#EA9720,#333333,auto,5px,10px) 
+//.content-rightBaner-button 
+
+.catalog-main-el-top-left, .slider-proj-mainEl-img
+	position relative
+	.owl-prev
+		position absolute
+		top 50%
+		left 5px
+		margin-top -25px
+	.owl-next
+		position absolute
+		top 50%
+		right 5px
+		margin-top -25px
+	.fa
+		font-size 45px
+		color white

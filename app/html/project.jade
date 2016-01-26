@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+html(lang="en")
+	//Include header-scripts
+	include ./block_html/head.jade
+body
+	include ./block_html/header.jade
+	
+	//breadcrump
+	.breadcrump
+		.container
+			ul
+				li 
+					a(href="#") Главная
+				li 
+					a(href="#") Проекты из бревна
+
+	//Catalog
+	.catalog-head
+		.container
+			.catalog-head-left
+				img(src="img/items-1.png", alt="")
+				.catalog-head-left-text
+					.catalog-head-left-title Дома и бани из Бревна и бруса Вологодской и Архангельской сосны
+					p Мы занимаемся производством домов уже более 10 лет. В своей работе мы используем только экологически чистые материалы.  Наши технологиии выверены временем. Мы создали уже более 400 домов, в которых живут счастливые семьи.
+			.catalog-head-right
+				.catalog-head-right-block
+					span.catalog-head-right-big-title Полный каталог
+					span.catalog-head-right-title проектов компании 
+					span.catalog-head-right-text (более 100 проектов)
+					span.catalog-head-right-textArrow Интересует?
+						img(src="img/down-arrow.png", alt="")
+
+					a.catalog-head-right-but(href="#")
+						img(src="img/icon-book.png", alt="")
+						span Загрузить <br> каталог проектов
+			.cf
+			
+			//catalog-lineFilter
+			.catalog-lineFilter
+				.catalog-lineFilter-left
+					.catalog-lineFilter-left-el Сортировать по:
+					.catalog-lineFilter-left-el.catalog-lineFilter-left-active
+						img(src="img/linerule-white.png", alt="")
+						span Площади
+						.catalog-lineFilter-trigle
+
+					.catalog-lineFilter-left-el
+						img(src="img/icon-view-white.png", alt="")
+						span Популярности
+						.catalog-lineFilter-trigle
+
+				.catalog-lineFilter-right Найдено 20 проектов (показано 8 из 24)
+			//catalog-lineFilter-end
+
+	//catalog main
+	.catalog-main
+		.container
+			//catalog-left
+			.catalog-main-left
+				.catalog-main-left-wrap
+					.catalog-main-left-tile Материал
+					.catalog-main-left-togBut
+						.catalog-main-left-togBut-left
+							img(src="img/icon-brevno.png", alt="")
+							span Бревно
+						.catalog-main-left-togBut-right
+							img(src="img/icon-brus.png", alt="")
+							span Брус
+
+					.catalog-main-left-divider
+
+					.catalog-main-left-tile Тип объекта
+					.catalog-main-left-togBut
+						.catalog-main-left-togBut-left
+							img(src="img/icon-brevno.png", alt="")
+							span Дом
+						.catalog-main-left-togBut-right
+							img(src="img/icon-brevno.png", alt="")
+							span Баня 
+
+					.catalog-main-left-divider
+
+					.catalog-main-left-tile Площадь
+					.catalog-main-left-inputs
+						input(type="checkbox" )#c5
+						label(for="c5") 
+							span
+							text до 100 м 
+								sup 2
+					.catalog-main-left-inputs
+						input(type="checkbox" )#c6
+						label(for="c6") 
+							span
+							text от 100 до 200 м 
+								sup 2
+					.catalog-main-left-inputs
+						input(type="checkbox" )#c7
+						label(for="c7") 
+							span
+							text более 200 м
+								sup 2
+
+					.catalog-main-left-divider
+
+					.catalog-main-left-tile Этажность
+					.catalog-main-left-inputs
+						input(type="checkbox" )#c8
+						label(for="c8") 
+							span
+							text 1 этаж
+					.catalog-main-left-inputs
+						input(type="checkbox" )#c9
+						label(for="c9") 
+							span
+							text 2 этажа
+
+					.catalog-main-left-divider
+
+					.catalog-main-left-tile Дополнительно
+					.catalog-main-left-inputs
+						input(type="checkbox" )#c10
+						label(for="c10") 
+							span
+							text только с парной
+					.catalog-main-left-inputs
+						input(type="checkbox" )#c11
+						label(for="c11") 
+							span
+							text только с балконом
+
+				.catalog-main-left-baner
+					img(src="img/sale-baner.png", alt="")
+			//catalog-left-end
+
+			//catalog-right-part
+			.catalog-main-right
+				- for (var i = 0; i < 8; i++)
+					//items
+					.catalog-main-el
+						.catalog-main-el-top
+							.catalog-main-el-top-left
+								- for (var j = 0; j < 4; j++)
+									a(href="img/items-2.png") 
+										img(src="img/items-2.png", alt="").catalog-main-el-top-img
+							.catalog-main-el-top-right
+								.catalog-main-el-top-right-title Проект №777
+								.catalog-main-el-top-right-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam eius eum consequatur corrupti in eveniet optio magnam. Modi ?
+								.catalog-main-el-info
+									img(src="img/linerule.png", alt="")
+									span 120м
+										sup 2
+								.catalog-main-el-info
+									img(src="img/icon-small-clock.png", alt="")
+									span 12 месяцев
+								.catalog-main-el-info
+									img(src="img/icon-view.png", alt="")
+									span 83 просмотра
+						.catalog-main-el-bot
+							div Дом из бревна ручной рубки
+							div 120 м2 , 2 этажа, 80 м2 жилая площадь
+				.cf
+				//pagination
+				.catalog-main-right-footer
+					.catalog-main-right-footer-left
+						div Не нашли, что искали?
+						div скачайте
+							a(href="#") Полный каталог проектов
+					.catalog-main-right-footer-right
+						div Найдено 20 проектов (показано 8 из 24)
+						.catalog-right-pagination
+							.catalog-right-pagination-el.pagination-active 1
+							.catalog-right-pagination-el 2
+							.catalog-right-pagination-el 3
+							.catalog-right-pagination-el Показать все
+				
+	//catalog-form
+	.catalog-form
+		.container
+			.catalog-form-title Хотите подобный проект ? Заполните форму и получите бонус
+
+			.catalog-form-wraper
+				img(src="img/items-3.png", alt="").catalog-form-left
+				.catalog-form-right
+					form(action="")
+						input(type="text" placeholder="Ваше имя")
+						input(type="text" placeholder="Ваш телефон")
+						.catalog-form-right-file
+							img(src="img/icon-ckrepka.png", alt="")
+							span Приложить свой проект
+							a(href="#").catalog-form-right-file-but Обзор
+						button.catalog-form-button Отправить
+
+
+	
+	//catalog main-end
+	
+	//footer
+	.footer
+		.container
+			.footer-wraper
+				.footer-el
+					img(src="img/footer-logo.png", alt="")
+				.footer-el
+					ul
+						li
+							a(href="#") о компании
+						li
+							a(href="#") Наши плюсы
+						li
+							a(href="#") О производстве
+						li
+							a(href="#") Услуги
+						li
+							a(href="#") Гарантии
+				.footer-el
+					ul
+						li
+							a(href="#") Дома из бревна
+						li
+							a(href="#") Дома из бруса
+						li
+							a(href="#") Бани из бревна
+						li
+							a(href="#") Бани из бруса
+				.footer-el
+					div 273984
+					div г. Санкт-Петербург
+					div ул. Подольская, д.42
+					div офис: 356
+				.footer-el
+					.footer-phone 8 (812) 921-40-51
+					span Заказать обратный звонок
+
+	include ./block_html/footer.jade 
+	//Include Footer-scripts
+	include ./block_html/script.jade 

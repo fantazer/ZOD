@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--Include header-scripts-->
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Document</title>
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="http://webfonts.ru/import/ptsans.css"/>
+    <link rel="stylesheet" href="http://webfonts.ru/import/zopa.css"/>
+    <link rel="stylesheet" href="http://webfonts.ru/import/ubuntu.css"/>
+    <link rel="stylesheet" href="bower/fancybox/source/jquery.fancybox.css"/>
+  </head>
+</html>
+<body>
+  <!--header-->
+  <div class="header">
+    <div class="container">
+      <div class="header-info">
+        <!--header-left-->
+        <div class="header-info-left">
+          <div class="header-logoBlock"><img src="img/logo.png" alt="" class="header-logoBlock-img"/>
+            <div class="header-logoBlock-text">Ваш город: <span class="dotted">Санкт-Петербург</span></div>
+          </div>
+          <div class="header-slogan">Мы строим дома из бревна и клееного бруса с 1998 <br> года из Вологодской и Архангельской сосны</div>
+        </div>
+        <!--header-right-->
+        <div class="header-info-right">
+          <div class="header-contact">
+            <div class="header-contact-number">8 (812) 921-40-51</div><a href="#" class="header-contact-callback">Закажите обратный звонок</a>
+            <div class="header-contact-text">СПб, ул. Подольская, д.42</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--header-m					-->
+  <div class="header-mainMenu">
+    <div class="container">
+      <div class="main-menu-toggle"><i class="fa fa-bars"></i></div>
+      <ul class="header-mainMenu-elem">
+        <li> <a href="#">Готовые проекты</a></li>
+        <li> <a href="#">наши плюсы</a></li>
+        <li> <a href="#">о производстве</a></li>
+        <li> <a href="#">услуги</a></li>
+        <li> <a href="#">гарантии</a></li>
+        <li> <a href="#">о компании</a></li>
+        <li> <a href="#">отзывыв</a></li>
+        <li> <a href="#">контакты</a></li>
+      </ul>
+    </div>
+  </div>
+  <!--header-->
+  <!--breadcrump-->
+  <div class="breadcrump">
+    <div class="container">
+      <ul>
+        <li> <a href="#">Главная</a></li>
+        <li> <a href="#">Проекты из бревна</a></li>
+      </ul>
+    </div>
+  </div>
+  <!--Catalog-->
+  <div class="catalog-head">
+    <div class="container">
+      <div class="catalog-head-left"><img src="img/items-1.png" alt=""/>
+        <div class="catalog-head-left-text">
+          <div class="catalog-head-left-title">Дома и бани из Бревна и бруса Вологодской и Архангельской сосны</div>
+          <p>Мы занимаемся производством домов уже более 10 лет. В своей работе мы используем только экологически чистые материалы.  Наши технологиии выверены временем. Мы создали уже более 400 домов, в которых живут счастливые семьи.</p>
+        </div>
+      </div>
+      <div class="catalog-head-right">
+        <div class="catalog-head-right-block"><span class="catalog-head-right-big-title">Полный каталог</span><span class="catalog-head-right-title">проектов компании </span><span class="catalog-head-right-text">(более 100 проектов)</span><span class="catalog-head-right-textArrow">Интересует?<img src="img/down-arrow.png" alt=""/></span><a href="#" class="catalog-head-right-but"><img src="img/icon-book.png" alt=""/><span>Загрузить <br> каталог проектов</span></a></div>
+      </div>
+      <div class="cf"></div>
+      <!--catalog-lineFilter-->
+      <div class="catalog-lineFilter">
+        <div class="catalog-lineFilter-left">
+          <div class="catalog-lineFilter-left-el">Сортировать по:</div>
+          <div class="catalog-lineFilter-left-el catalog-lineFilter-left-active"><img src="img/linerule-white.png" alt=""/><span>Площади</span>
+            <div class="catalog-lineFilter-trigle"></div>
+          </div>
+          <div class="catalog-lineFilter-left-el"><img src="img/icon-view-white.png" alt=""/><span>Популярности</span>
+            <div class="catalog-lineFilter-trigle"></div>
+          </div>
+        </div>
+        <div class="catalog-lineFilter-right">Найдено 20 проектов (показано 8 из 24)</div>
+      </div>
+      <!--catalog-lineFilter-end-->
+    </div>
+  </div>
+  <!--catalog main-->
+  <div class="catalog-main">
+    <div class="container">
+      <!--catalog-left-->
+      <div class="catalog-main-left">
+        <div class="catalog-main-left-wrap">
+          <div class="catalog-main-left-tile">Материал</div>
+          <div class="catalog-main-left-togBut">
+            <div class="catalog-main-left-togBut-left"><img src="img/icon-brevno.png" alt=""/><span>Бревно</span></div>
+            <div class="catalog-main-left-togBut-right"><img src="img/icon-brus.png" alt=""/><span>Брус</span></div>
+          </div>
+          <div class="catalog-main-left-divider"></div>
+          <div class="catalog-main-left-tile">Тип объекта</div>
+          <div class="catalog-main-left-togBut">
+            <div class="catalog-main-left-togBut-left"><img src="img/icon-brevno.png" alt=""/><span>Дом</span></div>
+            <div class="catalog-main-left-togBut-right"><img src="img/icon-brevno.png" alt=""/><span>Баня </span></div>
+          </div>
+          <div class="catalog-main-left-divider"></div>
+          <div class="catalog-main-left-tile">Площадь</div>
+          <div class="catalog-main-left-inputs">
+            <input type="checkbox" id="c5"/>
+            <label for="c5"> <span></span>
+              <text>до 100 м <sup>2</sup></text>
+            </label>
+          </div>
+          <div class="catalog-main-left-inputs">
+            <input type="checkbox" id="c6"/>
+            <label for="c6"> <span></span>
+              <text>от 100 до 200 м <sup>2</sup></text>
+            </label>
+          </div>
+          <div class="catalog-main-left-inputs">
+            <input type="checkbox" id="c7"/>
+            <label for="c7"> <span></span>
+              <text>более 200 м<sup>2</sup></text>
+            </label>
+          </div>
+          <div class="catalog-main-left-divider"></div>
+          <div class="catalog-main-left-tile">Этажность</div>
+          <div class="catalog-main-left-inputs">
+            <input type="checkbox" id="c8"/>
+            <label for="c8"> <span></span>
+              <text>1 этаж</text>
+            </label>
+          </div>
+          <div class="catalog-main-left-inputs">
+            <input type="checkbox" id="c9"/>
+            <label for="c9"> <span></span>
+              <text>2 этажа</text>
+            </label>
+          </div>
+          <div class="catalog-main-left-divider"></div>
+          <div class="catalog-main-left-tile">Дополнительно</div>
+          <div class="catalog-main-left-inputs">
+            <input type="checkbox" id="c10"/>
+            <label for="c10"> <span></span>
+              <text>только с парной</text>
+            </label>
+          </div>
+          <div class="catalog-main-left-inputs">
+            <input type="checkbox" id="c11"/>
+            <label for="c11"> <span></span>
+              <text>только с балконом</text>
+            </label>
+          </div>
+        </div>
+        <div class="catalog-main-left-baner"><img src="img/sale-baner.png" alt=""/></div>
+      </div>
+      <!--catalog-left-end-->
+      <!--catalog-right-part-->
+      <div class="catalog-main-right">
+        <!--items-->
+        <div class="catalog-main-el">
+          <div class="catalog-main-el-top">
+            <div class="catalog-main-el-top-left"><a href="img/items-2.png"> <img src="img/items-2.png" alt="" class="catalog-main-el-top-img"/></a><a href="img/items-2.png"> <img src="img/items-2.png" alt="" class="catalog-main-el-top-img"/></a><a href="img/items-2.png"> <img src="img/items-2.png" alt="" class="catalog-main-el-top-img"/></a><a href="img/items-2.png"> <img src="img/items-2.png" alt="" class="catalog-main-el-top-img"/></a>
+            </div>
+            <div class="catalog-main-el-top-right">
+              <div class="catalog-main-el-top-right-title">Проект №777</div>
+              <div class="catalog-main-el-top-right-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam eius eum consequatur corrupti in eveniet optio magnam. Modi ?</div>
+              <div class="catalog-main-el-info"><img src="img/linerule.png" alt=""/><span>120м<sup>2</sup></span></div>
+              <div class="catalog-main-el-info"><img src="img/icon-small-clock.png" alt=""/><span>12 месяцев</span></div>
+              <div class="catalog-main-el-info"><img src="img/icon-view.png" alt=""/><span>83 просмотра</span></div>
+            </div>
+          </div>
+          <div class="catalog-main-el-bot">
+            <div>Дом из бревна ручной рубки</div>
+            <div>120 м2 , 2 этажа, 80 м2 жилая площадь</div>
+          </div>
+        </div>
+        <!--items-->
+        <div class="catalog-main-el">
+          <div class="catalog-main-el-top">
+            <div class="catalog-main-el-top-left"><a href="img/items-2.png"> <img src="img/items-2.png" alt="" class="catalog-main-el-top-img"/></a><a href="img/items-2.png"> <img src="img/items-2.png" alt="" class="catalog-main-el-top-img"/></a><a href="img/items-2.png"> <img src="img/items-2.png" alt="" class="catalog-main-el-top-img"/></a><a href="img/items-2.png"> <img src="img/items-2.png" alt="" class="catalog-main-el-top-img"/></a>
+            </div>
+            <div class="catalog-main-el-top-right">
+              <div class="catalog-main-el-top-right-title">Проект №777</div>
+              <div class="catalog-main-el-top-right-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam eius eum consequatur corrupti in eveniet optio magnam. Modi ?</div>
+              <div class="catalog-main-el-info"><img src="img/linerule.png" alt=""/><span>120м<sup>2</sup></span></div>
+              <div class="catalog-main-el-info"><img src="img/icon-small-clock.png" alt=""/><span>12 месяцев</span></div>
+              <div class="catalog-main-el-info"><img src="img/icon-view.png" alt=""/><span>83 просмотра</span></div>
+            </div>
+          </div>
+          <div class="catalog-main-el-bot">
+            <div>Дом из бревна ручной рубки</div>
+            <div>120 м2 , 2 этажа, 80 м2 жилая площадь</div>
+          </div>
+        </div>
+        <!--items-->
+        <div class="catalog-main-el">
+          <div class="catalog-main-el-top">
+            <div class="catalog-main-el-top-left"><a href="img/items-2.png"> <img src="img/items-2.png" alt="" class="catalog-main-el-top-img"/></a><a href="img/items-2.png"> <img src="img/items-2.png" alt="" class="catalog-main-el-top-img"/></a><a href="img/items-2.png"> <img src="img/items-2.png" alt="" class="catalog-main-el-top-img"/></a><a href="img/items-2.png"> <img src="img/items-2.png" alt="" class="catalog-main-el-top-img"/></a>
+            </div>
+            <div class="catalog-main-el-top-right">
+              <div class="catalog-main-el-top-right-title">Проект №777</div>
+              <div class="catalog-main-el-top-right-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam eius eum consequatur corrupti in eveniet optio magnam. Modi ?</div>
+              <div class="catalog-main-el-info"><img src="img/linerule.png" alt=""/><span>120м<sup>2</sup></span></div>
+              <div class="catalog-main-el-info"><img src="img/icon-small-clock.png" alt=""/><span>12 месяцев</span></div>
+              <div class="catalog-main-el-info"><img src="img/icon-view.png" alt=""/><span>83 просмотра</span></div>
+            </div>
+          </div>
+          <div class="catalog-main-el-bot">
+            <div>Дом из бревна ручной рубки</div>
+            <div>120 м2 , 2 этажа, 80 м2 жилая площадь</div>
+          </div>
+        </div>
+        <!--items-->
+        <div class="catalog-main-el">
+          <div class="catalog-main-el-top">
+            <div class="catalog-main-el-top-left"><a href="img/items-2.png"> <img src="img/items-2.png" alt="" class="catalog-main-el-top-img"/></a><a href="img/items-2.png"> <img src="img/items-2.png" alt="" class="catalog-main-el-top-img"/></a><a href="img/items-2.png"> <img src="img/items-2.png" alt="" class="catalog-main-el-top-img"/></a><a href="img/items-2.png"> <img src="img/items-2.png" alt="" class="catalog-main-el-top-img"/></a>
+            </div>
+            <div class="catalog-main-el-top-right">
+              <div class="catalog-main-el-top-right-title">Проект №777</div>
+              <div class="catalog-main-el-top-right-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam eius eum consequatur corrupti in eveniet optio magnam. Modi ?</div>
+              <div class="catalog-main-el-info"><img src="img/linerule.png" alt=""/><span>120м<sup>2</sup></span></div>
+              <div class="catalog-main-el-info"><img src="img/icon-small-clock.png" alt=""/><span>12 месяцев</span></div>
+              <div class="catalog-main-el-info"><img src="img/icon-view.png" alt=""/><span>83 просмотра</span></div>
+            </div>
+          </div>
+          <div class="catalog-main-el-bot">
+            <div>Дом из бревна ручной рубки</div>
+            <div>120 м2 , 2 этажа, 80 м2 жилая площадь</div>
+          </div>
+        </div>
+        <!--items-->
+        <div class="catalog-main-el">
+          <div class="catalog-main-el-top">
+            <div class="catalog-main-el-top-left"><a href="img/items-2.png"> <img src="img/items-2.png" alt="" class="catalog-main-el-top-img"/></a><a href="img/items-2.png"> <img src="img/items-2.png" alt="" class="catalog-main-el-top-img"/></a><a href="img/items-2.png"> <img src="img/items-2.png" alt="" class="catalog-main-el-top-img"/></a><a href="img/items-2.png"> <img src="img/items-2.png" alt="" class="catalog-main-el-top-img"/></a>
+            </div>
+            <div class="catalog-main-el-top-right">
+              <div class="catalog-main-el-top-right-title">Проект №777</div>
+              <div class="catalog-main-el-top-right-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam eius eum consequatur corrupti in eveniet optio magnam. Modi ?</div>
+              <div class="catalog-main-el-info"><img src="img/linerule.png" alt=""/><span>120м<sup>2</sup></span></div>
+              <div class="catalog-main-el-info"><img src="img/icon-small-clock.png" alt=""/><span>12 месяцев</span></div>
+              <div class="catalog-main-el-info"><img src="img/icon-view.png" alt=""/><span>83 просмотра</span></div>
+            </div>
+          </div>
+          <div class="catalog-main-el-bot">
+            <div>Дом из бревна ручной рубки</div>
+            <div>120 м2 , 2 этажа, 80 м2 жилая площадь</div>
+          </div>
+        </div>
+        <!--items-->
+        <div class="catalog-main-el">
+          <div class="catalog-main-el-top">
+            <div class="catalog-main-el-top-left"><a href="img/items-2.png"> <img src="img/items-2.png" alt="" class="catalog-main-el-top-img"/></a><a href="img/items-2.png"> <img src="img/items-2.png" alt="" class="catalog-main-el-top-img"/></a><a href="img/items-2.png"> <img src="img/items-2.png" alt="" class="catalog-main-el-top-img"/></a><a href="img/items-2.png"> <img src="img/items-2.png" alt="" class="catalog-main-el-top-img"/></a>
+            </div>
+            <div class="catalog-main-el-top-right">
+              <div class="catalog-main-el-top-right-title">Проект №777</div>
+              <div class="catalog-main-el-top-right-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam eius eum consequatur corrupti in eveniet optio magnam. Modi ?</div>
+              <div class="catalog-main-el-info"><img src="img/linerule.png" alt=""/><span>120м<sup>2</sup></span></div>
+              <div class="catalog-main-el-info"><img src="img/icon-small-clock.png" alt=""/><span>12 месяцев</span></div>
+              <div class="catalog-main-el-info"><img src="img/icon-view.png" alt=""/><span>83 просмотра</span></div>
+            </div>
+          </div>
+          <div class="catalog-main-el-bot">
+            <div>Дом из бревна ручной рубки</div>
+            <div>120 м2 , 2 этажа, 80 м2 жилая площадь</div>
+          </div>
+        </div>
+        <!--items-->
+        <div class="catalog-main-el">
+          <div class="catalog-main-el-top">
+            <div class="catalog-main-el-top-left"><a href="img/items-2.png"> <img src="img/items-2.png" alt="" class="catalog-main-el-top-img"/></a><a href="img/items-2.png"> <img src="img/items-2.png" alt="" class="catalog-main-el-top-img"/></a><a href="img/items-2.png"> <img src="img/items-2.png" alt="" class="catalog-main-el-top-img"/></a><a href="img/items-2.png"> <img src="img/items-2.png" alt="" class="catalog-main-el-top-img"/></a>
+            </div>
+            <div class="catalog-main-el-top-right">
+              <div class="catalog-main-el-top-right-title">Проект №777</div>
+              <div class="catalog-main-el-top-right-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam eius eum consequatur corrupti in eveniet optio magnam. Modi ?</div>
+              <div class="catalog-main-el-info"><img src="img/linerule.png" alt=""/><span>120м<sup>2</sup></span></div>
+              <div class="catalog-main-el-info"><img src="img/icon-small-clock.png" alt=""/><span>12 месяцев</span></div>
+              <div class="catalog-main-el-info"><img src="img/icon-view.png" alt=""/><span>83 просмотра</span></div>
+            </div>
+          </div>
+          <div class="catalog-main-el-bot">
+            <div>Дом из бревна ручной рубки</div>
+            <div>120 м2 , 2 этажа, 80 м2 жилая площадь</div>
+          </div>
+        </div>
+        <!--items-->
+        <div class="catalog-main-el">
+          <div class="catalog-main-el-top">
+            <div class="catalog-main-el-top-left"><a href="img/items-2.png"> <img src="img/items-2.png" alt="" class="catalog-main-el-top-img"/></a><a href="img/items-2.png"> <img src="img/items-2.png" alt="" class="catalog-main-el-top-img"/></a><a href="img/items-2.png"> <img src="img/items-2.png" alt="" class="catalog-main-el-top-img"/></a><a href="img/items-2.png"> <img src="img/items-2.png" alt="" class="catalog-main-el-top-img"/></a>
+            </div>
+            <div class="catalog-main-el-top-right">
+              <div class="catalog-main-el-top-right-title">Проект №777</div>
+              <div class="catalog-main-el-top-right-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam eius eum consequatur corrupti in eveniet optio magnam. Modi ?</div>
+              <div class="catalog-main-el-info"><img src="img/linerule.png" alt=""/><span>120м<sup>2</sup></span></div>
+              <div class="catalog-main-el-info"><img src="img/icon-small-clock.png" alt=""/><span>12 месяцев</span></div>
+              <div class="catalog-main-el-info"><img src="img/icon-view.png" alt=""/><span>83 просмотра</span></div>
+            </div>
+          </div>
+          <div class="catalog-main-el-bot">
+            <div>Дом из бревна ручной рубки</div>
+            <div>120 м2 , 2 этажа, 80 м2 жилая площадь</div>
+          </div>
+        </div>
+        <div class="cf"></div>
+        <!--pagination-->
+        <div class="catalog-main-right-footer">
+          <div class="catalog-main-right-footer-left">
+            <div>Не нашли, что искали?</div>
+            <div>скачайте<a href="#">Полный каталог проектов</a></div>
+          </div>
+          <div class="catalog-main-right-footer-right">
+            <div>Найдено 20 проектов (показано 8 из 24)</div>
+            <div class="catalog-right-pagination">
+              <div class="catalog-right-pagination-el pagination-active">1</div>
+              <div class="catalog-right-pagination-el">2</div>
+              <div class="catalog-right-pagination-el">3</div>
+              <div class="catalog-right-pagination-el">Показать все</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--catalog-form-->
+  <div class="catalog-form">
+    <div class="container">
+      <div class="catalog-form-title">Хотите подобный проект ? Заполните форму и получите бонус</div>
+      <div class="catalog-form-wraper"><img src="img/items-3.png" alt="" class="catalog-form-left"/>
+        <div class="catalog-form-right">
+          <form action="">
+            <input type="text" placeholder="Ваше имя"/>
+            <input type="text" placeholder="Ваш телефон"/>
+            <div class="catalog-form-right-file"><img src="img/icon-ckrepka.png" alt=""/><span>Приложить свой проект</span><a href="#" class="catalog-form-right-file-but">Обзор</a></div>
+            <button class="catalog-form-button">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--catalog main-end-->
+  <!--footer-->
+  <div class="footer">
+    <div class="container">
+      <div class="footer-wraper">
+        <div class="footer-el"><img src="img/footer-logo.png" alt=""/></div>
+        <div class="footer-el">
+          <ul>
+            <li><a href="#">о компании</a></li>
+            <li><a href="#">Наши плюсы</a></li>
+            <li><a href="#">О производстве</a></li>
+            <li><a href="#">Услуги</a></li>
+            <li><a href="#">Гарантии</a></li>
+          </ul>
+        </div>
+        <div class="footer-el">
+          <ul>
+            <li><a href="#">Дома из бревна</a></li>
+            <li><a href="#">Дома из бруса</a></li>
+            <li><a href="#">Бани из бревна</a></li>
+            <li><a href="#">Бани из бруса</a></li>
+          </ul>
+        </div>
+        <div class="footer-el">
+          <div>273984</div>
+          <div>г. Санкт-Петербург</div>
+          <div>ул. Подольская, д.42</div>
+          <div>офис: 356</div>
+        </div>
+        <div class="footer-el">
+          <div class="footer-phone">8 (812) 921-40-51</div><span>Заказать обратный звонок</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Include Footer-scripts-->
+  <script src="scripts/combined.js"></script>
+</body>
