@@ -32,10 +32,14 @@ ul
 .header 
 	bgi('header-bg.png')
 	padding 10px 0
-
+	+below(600px)
+		background-size cover
 .header-info 
 	flex(between)
-
+	+below(600px)
+		flex-wrap wrap
+		flex(mid)
+		
 
 .header-info-left
 	flex(mid)
@@ -94,6 +98,8 @@ ul
 .header-mainMenu-elem
 	+below(780px)
 		display none
+	+above(780px)
+		display flex!important
 	flex(between)
 	a
 		+below(1050px)
@@ -173,10 +179,14 @@ ul
 		justify-content flex-end
 	color white
 	display none
+	padding 10px
 	&:hover
 		cursor pointer
 	
-.main-baner-srv 
+.main-baner-srv
+	+below(600px)
+		flex-wrap wrap
+		flex(mid) 
 	flex(between)
 	background rgba(255, 255, 255, 0.5)
 	padding 20px 10px
@@ -190,6 +200,15 @@ ul
 .main-baner-srv-item
 	+below(780px)
 		width 33%
+	+below(600px)
+		width auto
+		margin 10px
+	+below(400px)
+		justify-content flex-start
+		width 100%
+		img
+			margin 0 !important
+			margin-right 10px !important
 	flex(mid)
 
 .button-line
@@ -210,16 +229,24 @@ ul
 				width 48%
 				margin-right 5px
 				margin-bottom 10px
+			+below(400px)
+				width 100%
+				text-align center
+				justify-content: flex-start;
 			flex(mid)
 			width 100%
+			
 			gradient:#FFC26E #FF9B2E
+			box-shadow: 3px 3px 1px #A55F13;
 			padding 10px 20px
 			margin-right 20px
 			font-size 12px
 			border-radius 5px
-			box-shadow: 3px 3px 1px #A55F13;
+			transition all .8s
 			&:hover
 				cursor pointer
+				gradient:#5EA668 #42884B
+				box-shadow: 3px 3px 1px #285E2F;
 			&:last-child
 				margin-right 0
 			img
@@ -260,12 +287,20 @@ ul
 		margin 0
 		padding-left 40px
 .content-text
-	+below(780px)
+	+below(900px)
 		col(2/3)
+	+below(600px)
+		col(1)
 	col(3/4)
 .content-rightBaner
-	+below(780px)
+	+below(900px)
 		col(1/3)
+	+below(600px)
+		display none
+	+below(400px)
+		display flex
+		col(1)
+	
 	height 535px
 	bgi('baner-sale.png')
 	background-size cover
@@ -418,6 +453,8 @@ ul
 
 .form-lid
 	bgi('form-bg.png');
+	+below(400)
+		background-size cover
 	padding 30px 0px
 	margin-top 40px
 	input[type="checkbox"]
@@ -442,15 +479,27 @@ ul
 	text-align center
 	text-transform uppercase
 	margin-bottom 30px
+	+below(600px)
+		font-size 20px
 .form-lid-left
 	+below(780px)
 		width 30%
+	+below(600px)
+		width 50%
+	+below(400px)
+		width 100%
+		padding 0 50px
+		margin-bottom 20px
 	width 20% 
 .form-lid-left-checkbox
 	margin-bottom 10px 
 .form-lid-right
 	+below(780px)
 		width 30%
+	+below(600px)
+		width 50%
+	+below(400px)
+		width 100%
 	width 20%
 	form
 		flex(mid)
@@ -479,6 +528,7 @@ ul
 		box-shadow: 0px 3px 0px #845917;
 .form-lid-inputs
 	flex(mid)
+	flex-wrap wrap
 	
 .footer 
 	padding 40px 0
@@ -496,16 +546,47 @@ ul
 				color white
 .footer-el
 	col(1/5)
+	
+		
+	&:nth-child(1)
+		+below(800px)
+			col(1)
+			img
+				margin 0 auto
+				margin-bottom 20px
 	&:nth-child(2)
+		+below(600px)
+			width 30%
+		+below(400px)
+			width 45% !important
+			ul
+				flex(mid)
+				flex-flow column
 		a
 			text-transform uppercase
+	&:nth-child(3)
+		+below(400px)
+			width 45% !important
+			ul
+				flex(mid)
+				flex-flow column
 	&:nth-child(4)
 		+below(960px)
 			font-size 12px
+		+below(600px)
+			width 30%
+		+below(400px)
+			width 100% !important
+			flex(mid)
+			margin-top 10px
 		color white
 		div
 			margin-bottom 10px
 	&:nth-child(5)
+		+below(800px)
+			col(1)
+			flex(mid)
+			flex-flow column
 		span
 			color white
 			font-size 14px
@@ -514,9 +595,14 @@ ul
 .footer-wraper
 	flex(between)
 	align-items flex-start
+	flex-wrap wrap
 .footer-phone
+	+below(1200px)
+		font-size 22px
 	+below(960px)
 		font-size 18px
+	+below(800px)
+		font-size 28px
 	font-size 28px
 	font-weight 500
 	color white
@@ -547,7 +633,12 @@ ul
 //.container
 .catalog-head-left
 	col(4/5)
+	+below(960px)
+		col(1)
+	+below(800px)
+		flex-wrap wrap
 	display flex
+	
 .catalog-head-left-text
 	padding 20px
 	p
@@ -560,6 +651,8 @@ ul
 	font-weight 500
 //.catalog-head-right
 .catalog-head-right-block
+	+below(960px)
+		display none
 	col(1/5)
 	padding 10px
 	bgi('bg-catalog.png');
@@ -607,16 +700,32 @@ ul
 .cf
 	cf()
 	
-.catalog-lineFilter 
+.catalog-lineFilter
+	+below(860px)
+		font-size 12px
+		flex-wrap wrap 
 	color white
 	background #5FA869
 	flex(between)
 	padding 0 20px
 	margin-top 20px
-.catalog-lineFilter-left 
+	
+.catalog-lineFilter-left
+	+below(700px)
+		width 100%
+		flex-wrap wrap
+		justify-content center 
 	display flex
 .catalog-lineFilter-left-el
+	+below(960px)
+		padding 10px 15px
 	&:first-child
+		+below(1100px)
+			margin-left 0px
+		+below(960px)
+			margin 0
+		+below(500px)
+			width 100%
 		margin-left 100px
 		text-transform uppercase
 	flex(mid)
@@ -627,13 +736,23 @@ ul
 	triangle:'down' 5px white
 .catalog-lineFilter-left-active
 	background dark-green
-//.catalog-lineFilter-right 
+.catalog-lineFilter-right 
+	+below(700px)
+		width 100%
+		text-align center
+		padding 10px
 
 //.catalog-main 
 .catalog-main-left-wrap
 	background #ececec
 	padding 20px 15px
 .catalog-main-left
+	+below(960px)
+		col(1/3)
+	+below(700px)
+		col(1/2)
+	+below(600px)
+		col(1)
 	col(1/4) 
 .catalog-main-left-tile 
 	font-size 18px
@@ -698,14 +817,25 @@ ul
 		font-size 14px
 		font-weight 400
 .catalog-main-right 
+	+below(960px)
+		col(2/3)
+	+below(700px)
+		col(1/2)
+	+below(600px)
+		mt20px
+		col(1)
 	col(3/4)
 	
 .catalog-main-left-baner
+	+below(700px)
+		display none
 	margin-top 20px
 	img
 		width 100%
 
-.catalog-main-el 
+.catalog-main-el
+	+below(700px)
+		col(1) 
 	col(1/2,cycle:2)
 	color #333333
 	padding-bottom: 10px;
@@ -713,10 +843,18 @@ ul
 	margin-bottom 10px
 .catalog-main-el-top
 	display flex 
-.catalog-main-el-top-left 
+	+below(960px)
+		flex-wrap wrap
+.catalog-main-el-top-left
+	+below(960px)
+		col(1) 
+		img
+			width 100%
 	col(1/2)
 	
 .catalog-main-el-top-right
+	+below(960px)
+		col(1)
 	col(1/2) 
 	padding 10px
 .catalog-main-el-top-right-title 
@@ -739,9 +877,14 @@ ul
 	font-size 14px
 	
 .catalog-main-right-footer
+	+below(800px)
+		flex-wrap wrap
+		justify-content center
 	flex(between) 
 	margin 30px 0px
 .catalog-main-right-footer-left
+	+below(800px)
+		text-align center
 	color #333333
 	font-size 14px 
 	div
@@ -768,6 +911,8 @@ ul
 	border 1px solid #7a7a7a!important
 	color: #7a7a7a!important; 
 .catalog-form-right
+	+below
+		width 100%
 	form 
 			flex(mid)
 			flex-flow column
@@ -785,7 +930,9 @@ ul
 			background-color: rgb(255, 255, 255);
 			box-shadow: 0.5px 0.866px 4px 0px rgba(57, 51, 46, 0.4),inset 2.5px 4.33px 5px 0px rgba(49, 46, 43, 0.2);
 
-.catalog-form 
+.catalog-form
+	+below(700px)
+		background-size cover
 	padding 30px
 	bgi('bg-form.png');
 	
@@ -797,10 +944,19 @@ ul
 	margin-bottom 20px
 .catalog-form-wraper
 	flex(mid)
+	+below(700px)
+		flex-wrap wrap
 .catalog-form-left 
+	+below(700px)
+		width 100%
 	width 50%
 	margin-right 50px
 .catalog-form-right
+	+below(1000px)
+		width 40%
+	+below(700px)
+		margin-top 20px
+		width 80%
 	width 25% 
 .catalog-form-right-file
 	flex(between)
@@ -820,13 +976,58 @@ ul
 	.owl-prev
 		position absolute
 		top 50%
-		left 5px
-		margin-top -25px
+		left 5px!important
+		margin-top -25px!important
+		opacity 1!important
 	.owl-next
 		position absolute
 		top 50%
-		right 5px
-		margin-top -25px
+		right 5px!important
+		margin-top -25px!important
+		opacity 1!important
 	.fa
 		font-size 45px
 		color white
+
+.slider-proj-main-arrow
+	width 45px
+	height 45px
+	background #6CAB71
+	border-radius 50%
+	color white
+	font-size 28px
+	line-height 42px
+	padding-left 8px
+
+.slider-proj-main
+	position relative
+	.owl-next,.owl-prev
+		position absolute
+		top 50%
+		margin-top -22px
+		
+		+below(1300px)
+			margin-top -10px
+	.owl-next
+		right -45px
+		+below(1300px)
+			opacity .6
+			right 15px
+	.owl-prev
+		left -45px
+		+below(1300px)
+			opacity .6
+			left 15px
+		
+.text-button,
+.form-lid-right button
+	transition all .4s
+	&:hover
+		background #5EA668
+		box-shadow: 0px 3px 0px #285E2F;
+
+.content-rightBaner-button
+	transition all .4s
+	&:hover
+		box-shadow: 0px 3px 0px #845917;
+		background: #ff9c00;

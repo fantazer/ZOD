@@ -28,7 +28,10 @@ $('.main-menu-toggle').click(function(){
 	$(".slider-proj-main").owlCarousel({
 	 	items : 4,
 	 	pagination : false,
-	 	autoPlay : true,
+	 	autoPlay : false,
+	 	navigation : true,
+    navigationText : ["<i class='fa fa-arrow-left slider-proj-main-arrow'></i>"
+    								 ,"<i class='fa fa-arrow-right slider-proj-main-arrow'></i>"],
 	 	}
 	 ); 
 	$(".slider-proj-mainEl-img").owlCarousel({
@@ -38,7 +41,7 @@ $('.main-menu-toggle').click(function(){
 	 	autoPlay : false,
 	 	singleItem:true,
 	 	navigation : true,
-    navigationText : ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+    navigationText : ["<i class='fa fa-angle-left '></i>","<i class='fa fa-angle-right '></i>"],
 	 	}
 	 );
 	 $(".catalog-main-el-top-left").owlCarousel({
