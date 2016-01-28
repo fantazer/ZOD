@@ -10,6 +10,26 @@ rupture.scale = 0 400px 600px 780px 1050px 1200px
 rupture.scale-names = 'xs' 'sm' 'm' 'l' 'xl' 'hd'
 jeet.gutter = 1
 
+
+.arrow-slider
+	position relative
+	.owl-next,.owl-prev
+		position absolute
+		top 50%
+		margin-top -22px
+		+below(1300px)
+			margin-top -10px
+	.owl-next
+		right -60px
+		+below(1300px)
+			opacity .6
+			right 15px
+	.owl-prev
+		left -60px
+		+below(1300px)
+			opacity .6
+			left 15px
+
 wraper
 	center(1200px)
 	padding 20px
@@ -971,7 +991,8 @@ ul
 	but-flat(#EA9720,#333333,auto,5px,10px) 
 //.content-rightBaner-button 
 
-.catalog-main-el-top-left, .slider-proj-mainEl-img
+.catalog-main-el-top-left,
+.slider-proj-mainEl-img
 	position relative
 	.owl-prev
 		position absolute
@@ -1035,8 +1056,18 @@ ul
 .contact-head
 	margin-bottom 20px 
 .contact-head-left
+	+below(800px)
+		col(1/2)
+	+below(500px)
+		col(1)
 	col(2/3) 
 .contact-head-right
+	+below(800px)
+		col(1/2)
+	+below(500px)
+		col(1)
+		flex-flow column
+		flex(mid)
 	col(1/3) 
 .contact-head-right-title 
 	font-size 24px
@@ -1051,6 +1082,8 @@ ul
 		float left
 		margin-right 20px 
 .contact-head-right-number-text
+	+below(550px)
+		font-size 18px
 	font-size 24px
 	font-weight 500 
 .contact-head-right-link
@@ -1064,12 +1097,24 @@ ul
 		margin-right 10px
 		
 .contact-items
+	+below(500px)
+		col(1)
 	margin-bottom 10px
 	border: 1px solid #E6E1E1;
 	col(1/2,cycle:2) 
 .contact-items-left
+	+below(1250px)
+		col(0.5)
+	+below(900px)
+		col(1)
 	col(0.6) 
 .contact-items-right
+	+below(1250px)
+		col(0.5)
+	+below(900px)
+		col(1)
+		flex(mid)
+		flex-flow column
 	padding 10px
 	col(0.4) 
 .contact-items-right-title 
@@ -1079,10 +1124,19 @@ ul
 .contact-items-right-info
 	padding-left 10px 
 .contact-items-right-number
+	+below(900px)
+		width 100%
+		text-align center
+		img
+			display none
+		.contact-items-right-number-text
+			font-size 24px
+			
 	margin-bottom 20px
 	img
 		float left
 		margin-right 20px 
+		margin-bottom 20px
 .contact-items-right-number-text
 	font-size 18px
 	font-weight 500 
@@ -1107,3 +1161,228 @@ ul
 	
 .contact-small
 	margin-bottom 40px
+	
+
+.garant-head-left
+	margin-bottom 20px
+	col(4/5)
+	+below(960px)
+		col(1)
+	+below(800px)
+		flex-wrap wrap
+	display flex
+	
+.garant-head-left-text
+	padding 20px
+	p
+		font-weight 400
+		font-size 14px
+		line-height 25px
+
+.garant-head-left-title
+	font-size 26px
+	font-weight 500
+//.garant-head-right
+.garant-head-right-block
+	+below(960px)
+		display none
+	col(1/5)
+	padding 10px
+	bgi('bg-catalog.png');
+	background-size cover
+	border-radius: 5px;
+	border: 1px solid #EAE9E9;
+	span
+		display block
+.garant-head-right-big-title
+	font-size 20px
+	font-weight 700
+	text-transform uppercase
+.garant-head-right-title
+	font-size 14px
+	font-weight 700
+	text-transform uppercase
+.garant-head-right-text
+	font-size 14px
+	line-height 35px
+.garant-head-right-textArrow
+	margin-bottom 30px
+	margin-top 15px
+	position relative
+	img 
+		position absolute
+		left 100px
+		top 10px
+.garant-head-right-but
+	img
+		display inline
+		margin-right 10px
+	padding 10px 
+	tshadow(black)
+	color white
+	background yellow
+	font-size 14px
+	border-radius 5px
+	display: inline-flex
+	box-shadow: 0px 3px 0px #845917;
+	margin 10px 0
+	flex(mid)
+	display: inline-flex;
+	width 100%
+
+.garant-title
+	font-size 22px
+	font-weight 500
+	margin 30px 0px
+	
+//.garant-content
+//.container
+//.garant-title
+.garant-item
+	col(1/3,cycle:3)
+	margin-bottom 20px
+.garant-item-head
+	position relative
+	img
+		width 100%
+.garant-item-head-title
+	font-size 20px
+	color white
+	font-weight 500
+.garant-item-head-numb
+	width 45px
+	height 45px
+	border-radius 50%
+	background #323232
+	font-size 32px
+	flex(mid)
+	color white
+	position absolute
+	left 10px
+	bottom 10px
+.garant-item-text
+	font-size 16px
+	line-height 25px
+	margin-top 10px
+.garant-item-filter
+	position absolute
+	height 100%
+	width 50%
+	left 50%
+	top 0px
+	background rgba(23, 23, 23, 0.61)
+	flex(mid)
+	padding-left 10px
+
+.Garant-slider-cert-wrap
+	@extends .arrow-slider
+	.owl-item
+		flex(mid)
+//.Garant-slider-cert
+
+.garant-rewiev 
+	margin-top 30px
+	@extends .arrow-slider
+	margin-bottom 40px
+	
+.garant-rewiev-items 
+	background-color: #F6F6F6; 
+	border-radius 3px
+	padding 10px
+	padding-bottom 20px
+	border 1px solid #DBDBDB
+.garant-rewiev-items-head
+	display flex 
+	margin-bottom 15px
+.garant-rewiev-items-head-img
+	margin-right 20px 
+.garant-rewiev-items-head-text 
+	flex(mid)
+	flex-flow column
+	align-items flex-start
+	font-size 16px
+	font-weight 500
+
+.garant-rewiev-items-review 
+	font-size 16px
+	line-height 25px
+
+
+.catalog-form
+	+below(700px)
+		background-size cover
+	padding 30px
+	bgi('bg-form.png');
+	
+//.container 
+
+.garant-form
+	+below(700px)
+		background-size cover
+	padding 30px
+	bgi('bg-form.png');
+.garant-form-title 
+	text-align center
+	font-size 28px
+	font-weight 500
+	margin-bottom 20px
+	text-transform uppercase
+.garant-form-wraper
+	flex(mid)
+	flex-flow column
+	align-items flex-end
+	width 60%
+	margin 0 auto
+	+below(700px)
+		flex-wrap wrap
+.garant-form-left 
+	+below(700px)
+		width 100%
+	width 50%
+	margin-right 50px
+.garant-form-right
+	+below(1000px)
+		width 40%
+	+below(700px)
+		margin-top 20px
+		width 80%
+	width 40% 
+.garant-form-right-file
+	flex(between)
+	width 100%
+	span
+		font-size 14px 
+.garant-form-button
+	but-flat(#EA9720,white,100%)
+	margin-top 10px
+.garant-form-right-file-but
+	but-flat(#EA9720,#333333,auto,5px,10px)
+.garant-form-right
+	+below
+		width 100%
+form 
+		flex(mid)
+		width 100%
+	input
+		margin-right 20px
+		margin-bottom 20px
+		width 40%
+	input,textarea
+		margin-bottom 15px
+		width 100%
+		border-radius 5px
+		box-shadow 0 0 0
+		border 0px
+		padding 10px
+		border-style: solid;
+		border-width: 1px;
+		border-color: #B1B1B1
+		border-radius: 5px;
+		background-color: rgb(255, 255, 255);
+		box-shadow: 0.5px 0.866px 4px 0px rgba(57, 51, 46, 0.4),inset 2.5px 4.33px 5px 0px rgba(49, 46, 43, 0.2); 
+//.content-rightBaner-button 
+.garant-form-wraper-left
+	width 30%
+.garant-form-wraper-right
+	margin-left 20px
+	width 70%

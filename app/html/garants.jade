@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+html(lang="en")
+	//Include header-scripts
+	include ./block_html/head.jade
+body
+	include ./block_html/header.jade
+	
+	//breadcrump
+	.breadcrump
+		.container
+			ul
+				li 
+					a(href="#") Главная
+				li 
+					a(href="#") Гарантии
+	
+	//Garnts-head
+	.garant-head
+		.container
+			.garant-head-left
+				img(src="img/items-5.png", alt="")
+				.garant-head-left-text
+					.garant-head-left-title Гарантии работы с нами
+					p Мы занимаемся производством домов уже более 10 лет. В своей работе мы используем только экологически чистые материалы.  Наши технологиии выверены временем. Мы создали уже более 400 домов, в которых живут счастливые семьи.
+			.garant-head-right
+				.garant-head-right-block
+					span.garant-head-right-big-title Полный каталог
+					span.garant-head-right-title проектов компании 
+					span.garant-head-right-textArrow Интересует?
+						img(src="img/down-arrow.png", alt="")
+
+					a.garant-head-right-but(href="#")
+						img(src="img/icon-whiteDoc.png", alt="")
+						span Загрузить <br> каталог проектов
+			.cf
+
+	//garant-content
+	.garant-content
+		.container
+			.garant-title Мы работаем по следующей схеме
+			.garant-content-wraper
+				- each val,index in garants
+					.garant-item
+						.garant-item-head
+							img(src="img/garant-img-#{index+1}.png", alt="")
+							.garant-item-filter
+								.garant-item-head-title #{val['title']}
+							.garant-item-head-numb 
+								span #{index+1}
+						.garant-item-text #{val['text']}
+			.cf
+			.garant-title Дипломы / Сертификаты
+
+	//Garant-slider-cert
+	.container
+		.Garant-slider-cert-wrap
+			- for (var i = 0; i < 8; i++)
+				img(src="img/cert.png").Garant-slider-cert
+
+	//Garant-rewiev
+	.container
+		.garant-title Отзывы о нашей работе:
+		.garant-rewiev
+			- for (var i = 0; i < 3; i++)
+				.garant-rewiev-items
+					.garant-rewiev-items-head
+						img(src="img/avatar.png").garant-rewiev-items-head-img
+						.garant-rewiev-items-head-text
+							span Иван Попов
+							span Банк "РУССКИЙ СТАНДАРТ"
+					.garant-rewiev-items-review „Мы занимаемся производством домов уже более 10 лет. В своей работе мы используем только экологически чистые материалы.  Наши технологиии выверены временем. Мы создали уже более 400 домов, в которых живут счастливые семьи.  Мы занимаемся производством домов уже более 10 лет. В своей работе мы используем только экологически чистые материалы.  Наши технологиии выверены временем. Мы создали уже более 400 домов, в которых живут счастливые семьи. Мы занимаемся производством домов уже более 10 лет. В своей работе мы используем только экологически чистые материалы.  Наши технологиии выверены временем. Мы создали уже более 400 домов, в которых живут счастливые семьи. Мы занимаемся производством домов уже более 10 лет. В своей работе мы используем только экологически чистые материалы.  “
+
+	//garant-form
+	.garant-form
+		.container
+			.garant-form-title Давайте сотрудничать <br> Отправьте свой вопрос и мы ответим
+			.garant-form-wraper
+				form(action="")
+					.garant-form-wraper-left
+						input(type="text" placeholder="Ваше имя")
+						input(type="text" placeholder="Ваш телефон")
+					.garant-form-wraper-right
+						textarea(name="", cols="30", rows="4" placeholder="Ваше сообщение")
+				.garant-form-right
+					.garant-form-right-file
+						img(src="img/icon-ckrepka.png", alt="")
+						span Приложить свой проект
+						a(href="#").garant-form-right-file-but Обзор
+					button.garant-form-button Отправить
+	//footer
+	.footer
+		.container
+			.footer-wraper
+				.footer-el
+					img(src="img/footer-logo.png", alt="")
+				.footer-el
+					ul
+						li
+							a(href="#") о компании
+						li
+							a(href="#") Наши плюсы
+						li
+							a(href="#") О производстве
+						li
+							a(href="#") Услуги
+						li
+							a(href="#") Гарантии
+				.footer-el
+					ul
+						li
+							a(href="#") Дома из бревна
+						li
+							a(href="#") Дома из бруса
+						li
+							a(href="#") Бани из бревна
+						li
+							a(href="#") Бани из бруса
+				.footer-el
+					div 273984
+					div г. Санкт-Петербург
+					div ул. Подольская, д.42
+					div офис: 356
+				.footer-el
+					.footer-phone 8 (812) 921-40-51
+					span Заказать обратный звонок
+
+	include ./block_html/footer.jade 
+	//Include Footer-scripts
+	include ./block_html/script.jade 

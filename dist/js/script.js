@@ -25,7 +25,7 @@ $('.main-menu-toggle').click(function(){
 })
 
 
-	$(".slider-proj-main").owlCarousel({
+	$(".slider-proj-main,.Garant-slider-cert-wrap").owlCarousel({
 	 	items : 4,
 	 	pagination : false,
 	 	autoPlay : false,
@@ -54,6 +54,18 @@ $('.main-menu-toggle').click(function(){
     navigationText : ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
 	 	}
 	 ); 
+	 
+	 $(".garant-rewiev").owlCarousel({
+	 		items : 1,
+		 	autoHeight : true,
+		 	pagination : false,
+		 	autoPlay : false,
+		 	singleItem:true,
+		 	navigation : true,
+	    navigationText : ["<i class='fa fa-arrow-left slider-proj-main-arrow'></i>"
+    								 ,"<i class='fa fa-arrow-right slider-proj-main-arrow'></i>"],
+	 	}
+	 );
 	$('.catalog-main-el-top-img,.slider-proj-mainEl-img img').fancybox();
 
 	/* ###### init validate form  ######*/
