@@ -25,7 +25,7 @@ $('.main-menu-toggle').click(function(){
 })
 
 
-	$(".slider-proj-main,.Garant-slider-cert-wrap").owlCarousel({
+	$(".slider-proj-main,.Garant-slider-cert-wrap,.about-comand").owlCarousel({
 	 	items : 4,
 	 	pagination : false,
 	 	autoPlay : false,
@@ -68,6 +68,15 @@ $('.main-menu-toggle').click(function(){
 	 );
 	$('.catalog-main-el-top-img,.slider-proj-mainEl-img img').fancybox();
 
+	$(".about-partners").owlCarousel({
+	 	items : 6,
+	 	pagination : false,
+	 	autoPlay : false,
+	 	navigation : true,
+    navigationText : ["<i class='fa fa-arrow-left slider-proj-main-arrow'></i>"
+    								 ,"<i class='fa fa-arrow-right slider-proj-main-arrow'></i>"],
+	 	}
+	 );
 	/* ###### init validate form  ######*/
 	/* ###### bower i jquery-validation ######*/
 	/*$('#myform').validate({
