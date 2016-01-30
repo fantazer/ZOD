@@ -130,7 +130,7 @@ gulp.task('include',function(){
 gulp.task('serve', function () {
     browserSync.init({
         notify: false,
-        reloadDelay: 300,
+        reloadDelay: 500,
         server: {
             baseDir: "./app/",
 

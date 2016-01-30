@@ -77,6 +77,103 @@ $('.main-menu-toggle').click(function(){
     								 ,"<i class='fa fa-arrow-right slider-proj-main-arrow'></i>"],
 	 	}
 	 );
+
+	//Init slider + bottom items
+
+	var sync1 = $(".works-left-head");
+  var sync2 = $(".works-left-items");
+ 
+  sync1.owlCarousel({
+    singleItem : true,
+    slideSpeed : 1000,
+    navigation: true,
+    navigationText :["<i class='fa fa-angle-left'></i>"
+    								 ,"<i class='fa fa-angle-right'></i>"],
+    pagination:false,
+    afterAction : syncPosition,
+    responsiveRefreshRate : 200,
+     afterUpdate: function () {
+            updateSize();
+        },
+        afterInit:function(){
+            updateSize();
+        }
+  });
+ 
+  sync2.owlCarousel({
+    items : 3,
+    itemsScaleUp:true,
+    pagination:false,
+    responsiveRefreshRate : 100,
+    afterInit : function(el){
+      el.find(".owl-item").eq(0).addClass("synced");
+    },
+    
+  });
+ 
+  function syncPosition(el){
+    var current = this.currentItem;
+    $(sync2)
+      .find(".owl-item")
+      .removeClass("synced")
+      .eq(current)
+      .addClass("synced")
+    if($(sync2).data("owlCarousel") !== undefined){
+      center(current)
+    }
+  }
+ 
+  $(sync2).on("click", ".owl-item", function(e){
+    e.preventDefault();
+    var number = $(this).data("owlItem");
+    sync1.trigger("owl.goTo",number);
+  });
+ 
+  function center(number){
+    var sync2visible = sync2.data("owlCarousel").owl.visibleItems;
+    var num = number;
+    var found = false;
+    for(var i in sync2visible){
+      if(num === sync2visible[i]){
+        var found = true;
+      }
+    }
+ 
+    if(found===false){
+      if(num>sync2visible[sync2visible.length-1]){
+        sync2.trigger("owl.goTo", num - sync2visible.length+2)
+      }else{
+        if(num - 1 === -1){
+          num = 0;
+        }
+        sync2.trigger("owl.goTo", num);
+      }
+    } else if(num === sync2visible[sync2visible.length-1]){
+      sync2.trigger("owl.goTo", sync2visible[1])
+    } else if(num === sync2visible[0]){
+      sync2.trigger("owl.goTo", num-1)
+    }
+    
+  }
+
+function updateSize(){
+    var minHeight=parseInt($('.works-left-head .owl-item').eq(0).css('height'));
+    $('.works-left-head .owl-item').each(function () {
+        var thisHeight = parseInt($(this).css('height'));
+        minHeight=(minHeight<=thisHeight?minHeight:thisHeight);
+    });
+    $('.works-left-head .owl-wrapper-outer').css('height',minHeight+'px');
+}
+
+var $tabs = $('#horizontalTab');
+    $tabs.responsiveTabs({
+        rotate: false,
+        startCollapsed: 'accordion',
+        collapsible: 'accordion',
+        setHash: true,
+        active: 1
+        
+    });
 	/* ###### init validate form  ######*/
 	/* ###### bower i jquery-validation ######*/
 	/*$('#myform').validate({
