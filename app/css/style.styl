@@ -53,15 +53,17 @@ ul
 .header 
 	bgi('header-bg.png')
 	padding 10px 0
-	+below(600px)
+	+below(1100px)
 		background-size cover
-.header-info 
-	flex(between)
-	+below(600px)
-		flex-wrap wrap
+.header-info
+	+below(1100px)
 		flex(mid)
-		
+	flex(between)
+	flex-wrap wrap
 
+.header-contact
+	+below(1100px)
+		margin-top 20px
 .header-info-left
 	flex(mid)
 
@@ -74,12 +76,11 @@ ul
 	tshadow(white)
 
 .header-slogan 
-	+below(1050px)
-		display none
+	+below(1100px)
+		width 100%
 	font-size 18px
 	color braun
 	font(zopa)
-	margin-left 80px 
 	tshadow(white)
 
 
@@ -1908,3 +1909,29 @@ li.r-tabs-state-active
 	.owl-item 
 		padding 0px 5px
 	
+//edit header
+
+//.header-slogan
+	
+.header-slogan-text
+	+below(1100px)
+		margin-top 20px
+	text-align center
+.header-slogan-bot
+	flex(mid)
+	+below(1100px)
+		flex(around)
+		flex-wrap wrap
+.header-slogan-bot-el
+	flex(mid)
+	font-size 12px
+	max-width 200px
+	margin-top 15px
+	margin-right 5px
+	img
+		max-width inherit!important
+		padding: 10px 15px;
+		border-radius: 5px;
+		box-shadow: inset 0px 0px 14px #737272;
+		max-height: 45px
+		margin-right 5px

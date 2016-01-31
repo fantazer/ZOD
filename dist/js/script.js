@@ -66,7 +66,7 @@ $('.main-menu-toggle').click(function(){
     								 ,"<i class='fa fa-arrow-right slider-proj-main-arrow'></i>"],
 	 	}
 	 );
-	$('.catalog-main-el-top-img,.slider-proj-mainEl-img img').fancybox();
+	$('.catalog-main-el-top-img a,.slider-proj-mainEl-img a,.service-slider a,.catalog-main-el-top-left a').fancybox();
 
 	$(".about-partners").owlCarousel({
 	 	items : 6,

@@ -184,7 +184,7 @@ ul {
   background: url("../img/header-bg.png") no-repeat;
   padding: 10px 0;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1100px) {
   .header {
     background-size: cover;
   }
@@ -193,13 +193,18 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1100px) {
   .header-info {
-    flex-wrap: wrap;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .header-contact {
+    margin-top: 20px;
   }
 }
 .header-info-left {
@@ -218,12 +223,11 @@ ul {
   font-size: 18px;
   color: #5b3d0c;
   font-family: 'ZopaCyr';
-  margin-left: 80px;
   text-shadow: 1px 1px 0px #fff;
 }
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1100px) {
   .header-slogan {
-    display: none;
+    width: 100%;
   }
 }
 .header-contact-number {
@@ -3975,4 +3979,42 @@ li.r-tabs-state-active:before {
 }
 .service-slider .owl-item {
   padding: 0px 5px;
+}
+.header-slogan-text {
+  text-align: center;
+}
+@media only screen and (max-width: 1100px) {
+  .header-slogan-text {
+    margin-top: 20px;
+  }
+}
+.header-slogan-bot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 1100px) {
+  .header-slogan-bot {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+.header-slogan-bot-el {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  max-width: 200px;
+  margin-top: 15px;
+  margin-right: 5px;
+}
+.header-slogan-bot-el img {
+  max-width: inherit !important;
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 14px #737272;
+  max-height: 45px;
+  margin-right: 5px;
 }

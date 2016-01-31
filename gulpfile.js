@@ -49,7 +49,6 @@ gulp.task('make', function () {
     .pipe(gulp.dest('dist/js/'));
     return gulp.src('app/*.html')
         .pipe(assets)
-        .pipe(gulpif('*.js', uglify()))
         .pipe(gulpif('*.css', minifyCss()))
         .pipe(assets.restore())
         .pipe(useref())
