@@ -1,0 +1,140 @@
+mb20<!DOCTYPE html>
+html(lang="en")
+	//Include header-scripts
+	include ./block_html/head.jade
+body
+	include ./block_html/header.jade
+	
+	//breadcrump
+	.breadcrump
+		.container
+			ul
+				li 
+					a(href="#") Главная
+				li 
+					a(href="#") Услуги
+	
+	//Garnts-head
+	.service-head
+		.container
+			.service-head-left
+				img(src="img/items-9.png", alt="")
+				.service-head-left-text
+					.service-head-left-title Наши компетенции в строительстве
+					p Компания «Вологодское зодчество» - специализируется на выполнении строительных работ в области деревянного домостроения. Наша компания осуществляет весь комплекс работ по строительству и отделке домов из бревна и бруса. В своей работе мы используем только ценный «северный лес». Работая с нами вы всегда можете рассчитывать на великолепный результат и разумные цены.
+			.service-head-right
+				.service-head-right-block
+					span.service-head-right-big-title Полный каталог
+					span.service-head-right-title проектов компании 
+					span.service-head-right-textArrow Интересует?
+						img(src="img/down-arrow.png", alt="")
+
+					a.service-head-right-but(href="#")
+						img(src="img/icon-whiteDoc.png", alt="")
+						span Скачать договор <br> работы с нами 
+			.cf
+	
+	//service-tab
+	.container
+		.service-tab
+			.service-tab-left
+				.service-tab-left-vertical
+					ul
+						li
+							a(href="#service-tab-1") Проектирование и 3D моделирование
+						li
+							a(href="#service-tab-2") Устройство крыш домов из бруса и бревна
+						li
+							a(href="#service-tab-3") Устройство фундаментов деревянных домов
+						li
+							a(href="#service-tab-4") Экспертное сопровождение,консалтинг
+						li
+							a(href="#service-tab-5") Отделка деревянных домов
+					.service-tab-wraper
+						- for (var i = 0; i < 5; i++)
+							div(class='service-tab-text', id='service-tab-#{i+1}') 
+								.service-tab-text-tile Проектирование и 3D моделирование #{i+1}
+								p На нашем сайте вы можете ознакомиться с каталогом типовых проектов. При желании вы можете внести любые дизайнерские изменения с последующим переустройством внешнего вида и внутреннего пространства дома. Архитектурно-проектное бюро нашей компании разработает для вас Индивидуальный Авторский проект любого уровня сложности. 
+								p Проектируя дом у нас, вы:
+								ul
+									li доверяете работу профессиональным дипломированным архитекторам
+									li оптимизируете (снижаете) расходы на строительство дома
+									li воплощаете все свои пожелания и учитываете все детали 
+									li получаете скидку на строительство в нашей компании
+								p Опыт проектирования деревянных домов и бань позволяет нам создавать не только красивые и эргономичные дома, но и значительно оптимизировать расходы на их строительство.
+								p Этап проектирования включает: создание начального эскиза, разработка и оптимизация проекта; создание 3D-модели будущего дома; подготовка проектной технической документации (АР и КД).
+								p Если у Вас есть понравившийся Вам проект или эскиз дома – мы бесплатно внесём изменения и дадим свои рекомендации по конструктивным решениям и эргономике
+			//Right banner
+			.content-rightBaner.service-tab-right
+				.content-rightBaner-title Зимний лес со скидкой 
+					span.big-text 1000 руб за куб.м!
+				.content-rightBaner-date Только до 28 февраля!
+				.content-rightBaner-form
+					form(action="")
+						input(type="text" placeholder="Ваше имя")
+						input(type="text" placeholder="Ваш телефон")
+						button.content-rightBaner-button Получить скидку
+
+	//service-slider
+	.container
+		.service-slider
+			- for (var i = 0; i < 18; i++)
+				img(src="img/items-2.png", alt="")
+	//garant-form
+	.garant-form
+		.container
+			.garant-form-title Давайте сотрудничать <br> Отправьте свой вопрос и мы ответим
+			.garant-form-wraper
+				form(action="")
+					.garant-form-wraper-left
+						input(type="text" placeholder="Ваше имя")
+						input(type="text" placeholder="Ваш телефон")
+					.garant-form-wraper-right
+						textarea(name="", cols="30", rows="4" placeholder="Ваше сообщение")
+				.garant-form-right
+					.garant-form-right-file
+						img(src="img/icon-ckrepka.png", alt="")
+						span Приложить свой проект
+						a(href="#").garant-form-right-file-but Обзор
+					button.garant-form-button Отправить
+	
+	//footer
+	.footer
+		.container
+			.footer-wraper
+				.footer-el
+					img(src="img/footer-logo.png", alt="")
+				.footer-el
+					ul
+						li
+							a(href="#") о компании
+						li
+							a(href="#") Наши плюсы
+						li
+							a(href="#") О производстве
+						li
+							a(href="#") Услуги
+						li
+							a(href="#") Гарантии
+				.footer-el
+					ul
+						li
+							a(href="#") Дома из бревна
+						li
+							a(href="#") Дома из бруса
+						li
+							a(href="#") Бани из бревна
+						li
+							a(href="#") Бани из бруса
+				.footer-el
+					div 273984
+					div г. Санкт-Петербург
+					div ул. Подольская, д.42
+					div офис: 356
+				.footer-el
+					.footer-phone 8 (812) 921-40-51
+					span Заказать обратный звонок
+
+	include ./block_html/footer.jade 
+	//Include Footer-scripts
+	include ./block_html/script.jade 

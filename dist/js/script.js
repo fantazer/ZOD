@@ -78,6 +78,16 @@ $('.main-menu-toggle').click(function(){
 	 	}
 	 );
 
+	$(".service-slider").owlCarousel({
+	 	items : 6,
+	 	pagination : false,
+	 	autoPlay : false,
+	 	navigation : true,
+    navigationText :["<i class='fa fa-angle-left'></i>"
+    								 ,"<i class='fa fa-angle-right'></i>"],
+	 	}
+	 );
+
 	//Init slider + bottom items
 
 	var sync1 = $(".works-left-head");
@@ -174,6 +184,17 @@ var $tabs = $('#horizontalTab');
         active: 1
         
     });
+
+var $tabs = $('.service-tab-left-vertical');
+    $tabs.responsiveTabs({
+        rotate: false,
+        startCollapsed: 'accordion',
+        collapsible: 'accordion',
+        setHash: true,
+        active: 0
+        
+    });
+
 	/* ###### init validate form  ######*/
 	/* ###### bower i jquery-validation ######*/
 	/*$('#myform').validate({

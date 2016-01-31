@@ -66,7 +66,7 @@ $('.main-menu-toggle').click(function(){
     								 ,"<i class='fa fa-arrow-right slider-proj-main-arrow'></i>"],
 	 	}
 	 );
-	$('.catalog-main-el-top-img,.slider-proj-mainEl-img img').fancybox();
+	$('.catalog-main-el-top-img,.slider-proj-mainEl-img img,.service-slider img').fancybox();
 
 	$(".about-partners").owlCarousel({
 	 	items : 6,
@@ -75,6 +75,16 @@ $('.main-menu-toggle').click(function(){
 	 	navigation : true,
     navigationText : ["<i class='fa fa-arrow-left slider-proj-main-arrow'></i>"
     								 ,"<i class='fa fa-arrow-right slider-proj-main-arrow'></i>"],
+	 	}
+	 );
+
+	$(".service-slider").owlCarousel({
+	 	items : 6,
+	 	pagination : false,
+	 	autoPlay : false,
+	 	navigation : true,
+    navigationText :["<i class='fa fa-angle-left'></i>"
+    								 ,"<i class='fa fa-angle-right'></i>"],
 	 	}
 	 );
 
@@ -174,6 +184,17 @@ var $tabs = $('#horizontalTab');
         active: 1
         
     });
+
+var $tabs = $('.service-tab-left-vertical');
+    $tabs.responsiveTabs({
+        rotate: false,
+        startCollapsed: 'accordion',
+        collapsible: 'accordion',
+        setHash: true,
+        active: 0
+        
+    });
+
 	/* ###### init validate form  ######*/
 	/* ###### bower i jquery-validation ######*/
 	/*$('#myform').validate({

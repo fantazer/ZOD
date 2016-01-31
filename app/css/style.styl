@@ -1378,33 +1378,34 @@ ul
 .garant-form-right
 	+below
 		width 100%
-form 
-		+below(800px)
-			flex-flow column
-			.garant-form-wraper-left,
-			.garant-form-wraper-right
-				width 100%
-			.garant-form-wraper-right
-				margin-left 0	
-		flex(mid)
-		width 100%
-	input
-		margin-right 20px
-		margin-bottom 20px
-		width 40%
-	input,textarea
-		margin-bottom 15px
-		width 100%
-		border-radius 5px
-		box-shadow 0 0 0
-		border 0px
-		padding 10px
-		border-style: solid;
-		border-width: 1px;
-		border-color: #B1B1B1
-		border-radius: 5px;
-		background-color: rgb(255, 255, 255);
-		box-shadow: 0.5px 0.866px 4px 0px rgba(57, 51, 46, 0.4),inset 2.5px 4.33px 5px 0px rgba(49, 46, 43, 0.2); 
+.garant-form
+	form 
+			+below(800px)
+				flex-flow column
+				.garant-form-wraper-left,
+				.garant-form-wraper-right
+					width 100%
+				.garant-form-wraper-right
+					margin-left 0	
+			flex(mid)
+			width 100%
+		input
+			margin-right 20px
+			margin-bottom 20px
+			width 40%
+		input,textarea
+			margin-bottom 15px
+			width 100%
+			border-radius 5px
+			box-shadow 0 0 0
+			border 0px
+			padding 10px
+			border-style: solid;
+			border-width: 1px;
+			border-color: #B1B1B1
+			border-radius: 5px;
+			background-color: rgb(255, 255, 255);
+			box-shadow: 0.5px 0.866px 4px 0px rgba(57, 51, 46, 0.4),inset 2.5px 4.33px 5px 0px rgba(49, 46, 43, 0.2); 
 //.content-rightBaner-button 
 .garant-form-wraper-left
 	width 30%
@@ -1648,11 +1649,11 @@ form
 		right 0px
 .works-left-head
 	margin-bottom 10px
-.owl-carousel .owl-item img{
-	height:auto;
-	width:100%;
-	display: block;
-}
+	.owl-carousel .owl-item img{
+		height:auto;
+		width:100%;
+		display: block;
+	}
 
 .owl-carousel .item
 	margin:0px;
@@ -1736,3 +1737,174 @@ li.r-tabs-state-active
 		a
 			color white
 
+//page service
+
+.service-head-left
+	
+	col(4/5)
+	+below(960px)
+		col(1)
+	+below(800px)
+		flex-wrap wrap
+		img
+			width auto!important
+	img
+		width 100%
+	display flex
+	
+.service-head-left-text
+	padding 20px
+	p
+		font-weight 400
+		font-size 14px
+		line-height 25px
+
+.service-head-left-title
+	font-size 26px
+	font-weight 500
+//.service-head-right
+.service-head-right-block
+	+below(960px)
+		display none
+	col(1/5)
+	padding 10px
+	bgi('bg-catalog.png');
+	background-size cover
+	border-radius: 5px;
+	border: 1px solid #EAE9E9;
+	span
+		display block
+.service-head-right-big-title
+	font-size 20px
+	font-weight 700
+	text-transform uppercase
+.service-head-right-title
+	font-size 14px
+	font-weight 700
+	text-transform uppercase
+.service-head-right-text
+	font-size 14px
+	line-height 35px
+.service-head-right-textArrow
+	margin-bottom 30px
+	margin-top 15px
+	position relative
+	img 
+		position absolute
+		left 100px
+		top 10px
+.service-head-right-but
+	img
+		display inline
+		margin-right 10px
+	padding 10px 
+	tshadow(black)
+	color white
+	background yellow
+	font-size 14px
+	border-radius 5px
+	display: inline-flex
+	box-shadow: 0px 3px 0px #845917;
+	margin 10px 0
+	flex(mid)
+	display: inline-flex;
+	width 100%
+
+//.service-tab
+.service-tab-left
+	+below(900px)
+		col(1)
+	col(3/4)
+.service-tab-right
+	col(1/4)
+	+below(900px)
+		display none
+	+below(450px)
+		display flex
+		col(1)
+//.service-tab-wraper 
+//.service-tab-text 
+.service-tab-text-tile 
+	font-size 28px
+	font-weight 500
+	margin-bottom 20px
+	
+//.service-tab-right 
+.service-tab-left-vertical
+	+below(750px)
+		.service-tab-wraper
+			width 100%
+		.r-tabs-accordion-title
+			text-align: center;
+			display: block;
+			color: white;
+			background: #09AF4B;
+			padding: 10px;
+			margin-bottom 10px
+			border-radius 5px
+			margin-bottom 10px
+			width 100%
+			a
+				color white
+	.r-tabs-nav
+		max-width 240px
+	display flex
+	li.r-tabs-state-active
+		&:before
+			content ''
+			position absolute
+			width: 0;
+			height: 0;
+			border-top: 10px solid transparent;
+			border-left: 15px solid #41874A;
+			border-bottom: 10px solid transparent!important;
+			right: -15px;
+			top 50%
+			margin-top -10px
+		a
+			color white!important
+	.r-tabs-tab
+		width 100%
+		background #CDCDCD
+		padding 10px 15px
+		margin-bottom 5px
+		border-radius 5px
+		height 70px
+		position relative
+		flex(mid)
+		a
+			color #575757;
+			font-weight 500
+	.r-tabs-panel
+		padding-top 0px
+		padding-left 25px
+		p
+			line-height: 25px
+		ul
+			padding-left 40px
+		li
+			line-height 25px
+
+.service-slider
+	position relative
+	margin-bottom 40px
+	img
+		width 100%
+	.owl-next,
+	.owl-prev
+		color: #fff;
+		position: absolute;
+		height: 100%
+		top 0
+		background: #5fa869;
+		padding: 2px;
+		font-size: 40px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 2000;
+	.owl-next
+		right 0px
+	.owl-item 
+		padding 0px 5px
+	
