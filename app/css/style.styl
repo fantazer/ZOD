@@ -11,6 +11,7 @@ rupture.scale-names = 'xs' 'sm' 'm' 'l' 'xl' 'hd'
 jeet.gutter = 1
 
 
+
 .arrow-slider
 	position relative
 	.owl-next,.owl-prev
@@ -1477,12 +1478,15 @@ form
 .breadcrump-work
 	ul
 		display flex
+		flex-wrap wrap
+		justify-content center
 		a
 			color #333333
 			font-weight 400
 		li 
 			list-style none
 			margin-right 30px
+			margin-bottom 10px
 			position relative
 			&:after
 				content '/'
@@ -1501,11 +1505,16 @@ form
 	+below(850px)
 		flex(mid)
 .breadcrump-work-right 
-	
+	+below(600px)
+		justify-content center
+	flex-wrap wrap
 	display flex
 	justify-content flex-end
 
 .breadcrump-work-right-but
+	+below(600px)
+			margin 0px
+			margin-bottom 20px
 	width 200px
 	border 1px solid green
 	border-radius 3px
@@ -1616,6 +1625,12 @@ form
 .works-left
 	.owl-prev,
 	.owl-next
+		+below(650px)
+			height 160px
+		+below(500px)
+			top 0px
+			margin 0px
+			height 100%
 		color white
 		position absolute
 		height 120px
@@ -1646,7 +1661,9 @@ form
 .works-left-items
 	img
 		+below(650px)
-			height(200px)
+			height 160px!important
+		+below(500px)
+			display none!important
 		height: 120px!important;
 		display: block;
 		width: 100%;
@@ -1694,10 +1711,10 @@ form
 	border 1px solid #C0C1C1
 
 li.r-tabs-state-active
-	background #41874A
+	background #41874A!important
 	&:before{
 		content: '';
-    border-bottom: 38px solid #41874A;
+    border-bottom: 38px solid #41874A!important;
 	}
 	
 +below(1000px)
@@ -1718,3 +1735,4 @@ li.r-tabs-state-active
 		border-radius 5px
 		a
 			color white
+

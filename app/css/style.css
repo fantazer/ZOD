@@ -3205,6 +3205,8 @@ textarea {
 /* === Page - work === */
 .breadcrump-work ul {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .breadcrump-work ul a {
   color: #333;
@@ -3213,6 +3215,7 @@ textarea {
 .breadcrump-work ul li {
   list-style: none;
   margin-right: 30px;
+  margin-bottom: 10px;
   position: relative;
 }
 .breadcrump-work ul li:after {
@@ -3242,8 +3245,14 @@ textarea {
   }
 }
 .breadcrump-work-right {
+  flex-wrap: wrap;
   display: flex;
   justify-content: flex-end;
+}
+@media only screen and (max-width: 600px) {
+  .breadcrump-work-right {
+    justify-content: center;
+  }
 }
 .breadcrump-work-right-but {
   width: 200px;
@@ -3252,6 +3261,12 @@ textarea {
   padding: 5px;
   display: flex;
   margin-right: 50px;
+}
+@media only screen and (max-width: 600px) {
+  .breadcrump-work-right-but {
+    margin: 0px;
+    margin-bottom: 20px;
+  }
 }
 .breadcrump-work-right-but span {
   font-size: 14px;
@@ -3497,6 +3512,20 @@ textarea {
   z-index: 2000;
   margin-top: 10px;
 }
+@media only screen and (max-width: 650px) {
+  .works-left .owl-prev,
+  .works-left .owl-next {
+    height: 160px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .works-left .owl-prev,
+  .works-left .owl-next {
+    top: 0px;
+    margin: 0px;
+    height: 100%;
+  }
+}
 .works-left .owl-prev {
   left: 0px;
 }
@@ -3518,6 +3547,16 @@ textarea {
   height: 120px !important;
   display: block;
   width: 100%;
+}
+@media only screen and (max-width: 650px) {
+  .works-left-items img {
+    height: 160px !important;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .works-left-items img {
+    display: none !important;
+  }
 }
 .works-nav {
   display: flex;
@@ -3575,11 +3614,11 @@ textarea {
   border: 1px solid #c0c1c1;
 }
 li.r-tabs-state-active {
-  background: #41874a;
+  background: #41874a !important;
 }
 li.r-tabs-state-active:before {
   content: '';
-  border-bottom: 38px solid #41874a;
+  border-bottom: 38px solid #41874a !important;
 }
 @media only screen and (max-width: 1000px) {
   .or {
