@@ -2004,3 +2004,73 @@ li.r-tabs-state-active
 		box-shadow: inset 0px 0px 14px #737272;
 		max-height: 45px
 		margin-right 5px
+		
+.advant-items-row
+	width 100%
+	margin-bottom 20px
+	padding-top: 10px
+	border-top: 2px solid rgba(210, 210, 210, 0.43);
+.advant-items
+	flex(between)
+	flex-wrap wrap
+.advant-items-img
+	+below(700px)
+		width 100%
+		margin-bottom 20px
+	width 30%
+	position relative
+	img
+		width 100%
+	.advant-items-img-text
+		position: absolute;
+		color: #fff;
+		padding: 10px;
+		bottom: 10%;
+		background: rgba(9, 175, 75, 0.72);
+		width: 90%;
+		
+.advant-items-red
+	+below(700px)
+		width 100%
+		margin-bottom 20px
+	width 30%
+.advant-items-red-head
+	display flex
+	align-items center
+	margin-bottom 10px
+	img
+		margin-right 20px
+	span
+		color red
+		font-size 24px
+		font-weight 500
+.advant-items-red-text
+	+below(950px)
+		font-size 12px
+	+below(700px)
+		font-size 14px
+	color red
+	margin-left 50px
+	font-weight 500
+.advant-items-green
+	+below(700px)
+		width 100%
+	width 30%
+.advant-items-green-head
+	display flex
+	align-items center
+	margin-bottom 10px
+	img
+		margin-right 20px
+	span
+		color green
+		font-size 24px
+		font-weight 500
+.advant-items-green-text
+	+below(950px)
+		font-size 12px
+	+below(700px)
+		font-size 14px
+	color green
+	margin-left 50px
+	font-weight 500

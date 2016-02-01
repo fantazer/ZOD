@@ -1,0 +1,116 @@
+mb20<!DOCTYPE html>
+html(lang="en")
+	//Include header-scripts
+	include ./block_html/head.jade
+body
+	include ./block_html/header.jade
+	
+	//breadcrump
+	.breadcrump
+		.container
+			ul
+				li 
+					a(href="#") Главная
+				li 
+					a(href="#") Услуги
+	
+	//Garnts-head
+	.service-head
+		.container
+			.service-head-left
+				img(src="img/items-9.png", alt="")
+				.service-head-left-text
+					.service-head-left-title Наши компетенции в строительстве
+					p Компания «Вологодское зодчество» - специализируется на выполнении строительных работ в области деревянного домостроения. Наша компания осуществляет весь комплекс работ по строительству и отделке домов из бревна и бруса. В своей работе мы используем только ценный «северный лес». Работая с нами вы всегда можете рассчитывать на великолепный результат и разумные цены.
+			.service-head-right
+				.service-head-right-block
+					span.service-head-right-big-title Полный каталог
+					span.service-head-right-title проектов компании 
+					span.service-head-right-textArrow Интересует?
+						img(src="img/down-arrow.png", alt="")
+
+					a.service-head-right-but(href="#")
+						img(src="img/icon-whiteDoc.png", alt="")
+						span Скачать договор <br> работы с нами 
+			.cf
+	
+	//advant-items
+	.container
+		- for (var i = 0; i < 8; i++)
+			.advant-items-row
+				.advant-items
+					.advant-items-img
+						img(src="img/items-9.png", alt="")
+						.advant-items-img-text Ценнейший лес
+					.advant-items-red
+						.advant-items-red-head
+							img(src="img/icon-red.png", alt="")
+							span Как у других
+						.advant-items-red-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet omnis, fugiat sunt expedita maiores placeat modi voluptatem! Cum quos voluptas necessitatibus voluptatem. Illum modi, eius, repudiandae quae tempore consequuntur culpa?
+					.advant-items-green
+						.advant-items-green-head
+							img(src="img/icon-green.png", alt="")
+							span Как у нас
+						.advant-items-green-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ipsam eum nostrum laboriosam voluptatibus, atque fugit, labore unde a, nulla hic cupiditate odio velit libero repellat doloremque cum eveniet earum.
+
+
+
+
+	//garant-form
+	.garant-form
+		.container
+			.garant-form-title Давайте сотрудничать <br> Отправьте свой вопрос и мы ответим
+			.garant-form-wraper
+				form(action="")
+					.garant-form-wraper-left
+						input(type="text" placeholder="Ваше имя")
+						input(type="text" placeholder="Ваш телефон")
+					.garant-form-wraper-right
+						textarea(name="", cols="30", rows="4" placeholder="Ваше сообщение")
+				.garant-form-right
+					.garant-form-right-file
+						img(src="img/icon-ckrepka.png", alt="")
+						span Приложить свой проект
+						a(href="#").garant-form-right-file-but Обзор
+					button.garant-form-button Отправить
+	
+	//footer
+	.footer
+		.container
+			.footer-wraper
+				.footer-el
+					img(src="img/footer-logo.png", alt="")
+				.footer-el
+					ul
+						li
+							a(href="#") о компании
+						li
+							a(href="#") Наши плюсы
+						li
+							a(href="#") О производстве
+						li
+							a(href="#") Услуги
+						li
+							a(href="#") Гарантии
+				.footer-el
+					ul
+						li
+							a(href="#") Дома из бревна
+						li
+							a(href="#") Дома из бруса
+						li
+							a(href="#") Бани из бревна
+						li
+							a(href="#") Бани из бруса
+				.footer-el
+					div 273984
+					div г. Санкт-Петербург
+					div ул. Подольская, д.42
+					div офис: 356
+				.footer-el
+					.footer-phone 8 (812) 921-40-51
+					span Заказать обратный звонок
+
+	include ./block_html/footer.jade 
+	//Include Footer-scripts
+	include ./block_html/script.jade 

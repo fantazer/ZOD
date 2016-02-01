@@ -4106,3 +4106,109 @@ li.r-tabs-state-active:before {
   max-height: 45px;
   margin-right: 5px;
 }
+.advant-items-row {
+  width: 100%;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  border-top: 2px solid rgba(210,210,210,0.43);
+}
+.advant-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.advant-items-img {
+  width: 30%;
+  position: relative;
+}
+@media only screen and (max-width: 700px) {
+  .advant-items-img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+.advant-items-img img {
+  width: 100%;
+}
+.advant-items-img .advant-items-img-text {
+  position: absolute;
+  color: #fff;
+  padding: 10px;
+  bottom: 10%;
+  background: rgba(9,175,75,0.72);
+  width: 90%;
+}
+.advant-items-red {
+  width: 30%;
+}
+@media only screen and (max-width: 700px) {
+  .advant-items-red {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+.advant-items-red-head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.advant-items-red-head img {
+  margin-right: 20px;
+}
+.advant-items-red-head span {
+  color: #d13f19;
+  font-size: 24px;
+  font-weight: 500;
+}
+.advant-items-red-text {
+  color: #d13f19;
+  margin-left: 50px;
+  font-weight: 500;
+}
+@media only screen and (max-width: 950px) {
+  .advant-items-red-text {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .advant-items-red-text {
+    font-size: 14px;
+  }
+}
+.advant-items-green {
+  width: 30%;
+}
+@media only screen and (max-width: 700px) {
+  .advant-items-green {
+    width: 100%;
+  }
+}
+.advant-items-green-head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.advant-items-green-head img {
+  margin-right: 20px;
+}
+.advant-items-green-head span {
+  color: #09af4b;
+  font-size: 24px;
+  font-weight: 500;
+}
+.advant-items-green-text {
+  color: #09af4b;
+  margin-left: 50px;
+  font-weight: 500;
+}
+@media only screen and (max-width: 950px) {
+  .advant-items-green-text {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .advant-items-green-text {
+    font-size: 14px;
+  }
+}
