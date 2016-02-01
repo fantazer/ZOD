@@ -940,16 +940,20 @@ ul
 	+below(960px)
 		flex-wrap wrap
 .catalog-main-el-top-left
+	img
+		width 100%
+		max-height 180px
 	+below(960px)
 		col(1) 
 		img
 			width 100%
-	col(1/2)
+			max-height inherit
+	col(0.60)
 	
 .catalog-main-el-top-right
 	+below(960px)
 		col(1)
-	col(1/2) 
+	col(0.40) 
 	padding 10px
 .catalog-main-el-top-right-title 
 	font-weight 500
@@ -957,7 +961,7 @@ ul
 	margin-bottom 15px
 	color black
 .catalog-main-el-top-right-text 
-	font-size 14px
+	font-size 16px
 	margin-bottom 15px
 .catalog-main-el-info
 	margin-bottom 5px
@@ -969,7 +973,29 @@ ul
 .catalog-main-el-bot
 	padding-left 10px 
 	font-size 14px
-	
+	margin-top 15px
+	display: flex;
+	justify-content: space-between;
+	align-items center
+	flex-wrap: wrap;
+.catalog-main-el-bot-right
+	padding-right 20px
+	a
+		+below(1200px)
+			margin-top 20px
+		height: 35px;
+		height 35px
+		font-weight 500
+		font-size 14px
+		font(ubuntu)
+		flex(mid)
+		width 100%
+		padding 15px 10px
+		gradient #F9C24D #F38218
+		border-radius: 10px;
+		box-shadow: inset 0px 1px 4px white
+		margin-right 20px
+		color black
 .catalog-main-right-footer
 	+below(800px)
 		flex-wrap wrap
