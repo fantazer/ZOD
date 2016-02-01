@@ -34,7 +34,8 @@ body
 			- for (var i = 0; i < 8; i++)
 				.about-comand-items
 					.about-comand-items-title Ольга Иванова
-					img(src="img/comand.png", alt="")
+					a(href="img/comand.png").about-comand-img
+						img(src="img/comand.png", alt="")
 					.about-comand-items-mail 
 						span.fa.fa-envelope-o
 						span Написать письмо
@@ -45,7 +46,8 @@ body
 		.about-title Дипломы / Сертификаты
 		.Garant-slider-cert-wrap
 			- for (var i = 0; i < 8; i++)
-				img(src="img/cert.png").Garant-slider-cert
+				a(href="img/cert.png").Garant-slider-cert-img
+					img(src="img/cert.png").Garant-slider-cert
 
 	//About-rewiev
 	.container
@@ -65,7 +67,8 @@ body
 		.about-title Наши партнеры
 		.about-partners
 			- for (var i = 0; i < 18; i++)
-				img(src="img/partners.png", alt="")
+				a(href="img/partners.png")
+					img(src="img/partners.png", alt="")
 
 
 	//About-form
@@ -86,42 +89,6 @@ body
 						a(href="#").garant-form-right-file-but Обзор
 					button.garant-form-button Отправить
 	
-	//footer
-	.footer
-		.container
-			.footer-wraper
-				.footer-el
-					img(src="img/footer-logo.png", alt="")
-				.footer-el
-					ul
-						li
-							a(href="#") о компании
-						li
-							a(href="#") Наши плюсы
-						li
-							a(href="#") О производстве
-						li
-							a(href="#") Услуги
-						li
-							a(href="#") Гарантии
-				.footer-el
-					ul
-						li
-							a(href="#") Дома из бревна
-						li
-							a(href="#") Дома из бруса
-						li
-							a(href="#") Бани из бревна
-						li
-							a(href="#") Бани из бруса
-				.footer-el
-					div 273984
-					div г. Санкт-Петербург
-					div ул. Подольская, д.42
-					div офис: 356
-				.footer-el
-					.footer-phone 8 (812) 921-40-51
-					span Заказать обратный звонок
 
 	include ./block_html/footer.jade 
 	//Include Footer-scripts

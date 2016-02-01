@@ -43,7 +43,7 @@ function errorhandler() {
 
 
 //useref
-gulp.task('make', function () {
+gulp.task('make-js-css', function () {
     var assets = useref.assets();
      gulp.src('app/js/*.js')
     .pipe(gulp.dest('dist/js/'));
@@ -150,4 +150,5 @@ gulp.task('html-lint', function() {
 //default
 gulp.task('use',[ 'prefix' , 'bower']);
 gulp.task('img',[ 'imagePng' , 'imageJpg']);
+gulp.task('make',[ 'prefix' , 'make-js-css']);
 gulp.task('default',[  'see' , 'serve' ]);

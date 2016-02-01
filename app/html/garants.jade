@@ -33,7 +33,7 @@ body
 						img(src="img/icon-whiteDoc.png", alt="")
 						span Загрузить <br> каталог проектов
 			.cf
-	img(src="logo", alt="")
+	
 	//garant-content
 	.garant-content
 		.container
@@ -55,7 +55,8 @@ body
 	.container
 		.Garant-slider-cert-wrap
 			- for (var i = 0; i < 8; i++)
-				img(src="img/cert.png").Garant-slider-cert
+				a(href="img/cert.png",rel="garant-slider").Garant-slider-href
+					img(src="img/cert.png").Garant-slider-cert
 
 	//Garant-rewiev
 	.container
@@ -87,42 +88,7 @@ body
 						span Приложить свой проект
 						a(href="#").garant-form-right-file-but Обзор
 					button.garant-form-button Отправить
-	//footer
-	.footer
-		.container
-			.footer-wraper
-				.footer-el
-					img(src="img/footer-logo.png", alt="")
-				.footer-el
-					ul
-						li
-							a(href="#") о компании
-						li
-							a(href="#") Наши плюсы
-						li
-							a(href="#") О производстве
-						li
-							a(href="#") Услуги
-						li
-							a(href="#") Гарантии
-				.footer-el
-					ul
-						li
-							a(href="#") Дома из бревна
-						li
-							a(href="#") Дома из бруса
-						li
-							a(href="#") Бани из бревна
-						li
-							a(href="#") Бани из бруса
-				.footer-el
-					div 273984
-					div г. Санкт-Петербург
-					div ул. Подольская, д.42
-					div офис: 356
-				.footer-el
-					.footer-phone 8 (812) 921-40-51
-					span Заказать обратный звонок
+
 
 	include ./block_html/footer.jade 
 	//Include Footer-scripts
