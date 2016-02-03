@@ -187,9 +187,9 @@ body
 			.catalog-form-wraper
 				img(src="img/items-3.png", alt="").catalog-form-left
 				.catalog-form-right
-					form(action="")
-						input(type="text" placeholder="Ваше имя")
-						input(type="text" placeholder="Ваш телефон")
+					form(action="")#validateform
+						input(type="text" placeholder="Ваше имя" name="name")
+						input(type="text" placeholder="Ваш телефон" name="phone")
 						.catalog-form-right-file
 							img(src="img/icon-ckrepka.png", alt="")
 							span Приложить свой проект

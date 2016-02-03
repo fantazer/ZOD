@@ -4,6 +4,9 @@
 @import 'rupture'
 @import "variable/*"
 
+img, video, iframe{
+	max-width: inherit!important
+}
 border-box-html()
 fluid-media()
 rupture.scale = 0 400px 600px 780px 1050px 1200px
@@ -161,6 +164,8 @@ ul
 		color white
 		font-size 14px
 	li
+		+below(800px)
+			border-bottom: 1px solid #559A5E;
 		list-style none
 		text-transform uppercase
 		color white
@@ -169,6 +174,9 @@ ul
 		.fa
 			margin-right 5px
 		&:nth-child(1)
+			border-right: 1px solid #41874A;
+			+below(800px)
+				background #5ea668
 			z-index 200
 			&:after
 				content ''
@@ -183,12 +191,16 @@ ul
 				
 		&:nth-child(2)
 			background #5EA668
+			border-right: 1px solid #5EA668;
 		&:nth-child(3)
 			background #5EA668
+			border-right: 1px solid #5EA668;
 		&:nth-child(4)
 			background #5EA668
+			border-right: 1px solid #5EA668;
 		&:nth-child(5)
 			background #5EA668
+			border-right: 1px solid #5EA668;
 			z-index 200
 			&:after
 				content ''
@@ -201,10 +213,22 @@ ul
 				right: -15px;
 				top: 0px;
 		&:nth-child(6)
+			+below(800px)
+				background #5ea668
+				a
+					color white!important
+				.fa
+					display none
 			bgi('line-menu.png')
 			a
 				color #8a5522
 		&:nth-child(7)
+			+below(800px)
+				background #5ea668
+				a
+					color white!important
+				.fa
+					display none
 			bgi('line-menu.png')
 			a
 				color #8a5522
@@ -644,9 +668,13 @@ ul
 	
 		
 	&:nth-child(1)
+		img
+			width 70%
+			margin 0 auto
 		+below(800px)
 			col(1)
 			img
+				width auto
 				margin 0 auto
 				margin-bottom 20px
 	&:nth-child(2)
@@ -736,7 +764,6 @@ ul
 			width auto!important
 	display flex
 	img
-		width 100%
 		img-border()
 .catalog-head-left-text
 	padding 20px
@@ -748,6 +775,7 @@ ul
 .catalog-head-left-title
 	font-size 26px
 	font-weight 500
+	margin-bottom 20px
 //.catalog-head-right
 .catalog-head-right-block
 	+below(960px)
@@ -1280,7 +1308,6 @@ ul
 		img
 			width auto!important
 	img
-		width 100%
 		img-border()
 	display flex
 	
@@ -1294,6 +1321,7 @@ ul
 .garant-head-left-title
 	font-size 26px
 	font-weight 500
+	margin-bottom 20px
 //.garant-head-right
 .garant-head-right-block
 	+below(960px)
@@ -1408,13 +1436,13 @@ ul
 	margin-top 30px
 	@extends .arrow-slider
 	margin-bottom 40px
+	border 1px solid #DBDBDB
+	border-radius 3px
 	
 .garant-rewiev-items 
 	background-color: #F6F6F6; 
-	border-radius 3px
 	padding 10px
 	padding-bottom 20px
-	border 1px solid #DBDBDB
 .garant-rewiev-items-head
 	display flex 
 	margin-bottom 15px
@@ -1523,9 +1551,34 @@ ul
 	
 .garant-item
 	+below(700px)
+		&:after
+			content ''
+			bgi('arrow-right.png')
+		&:nth-child(even)
+			&:after
+				content ''
+				background none
 		col(1/2, cycle:2, uncycle:3)
 	+below(550px)
 		col(1)
+		&:after
+			content ''
+			background none!important
+	padding 2%
+	position relative
+	&:after
+		content: '';
+		background: url("../img/arrow-right.png") no-repeat;
+		width: 65px;
+		height: 30px;
+		position: absolute;
+		top: -7%;
+		right: -10%;
+		z-index: 2000;
+	&:nth-child(3n+3)
+		&:after
+			content ''
+			background none
 	
 //.about-head 
 .about-head-left
@@ -1868,12 +1921,12 @@ li.r-tabs-state-active
 		img
 			width auto!important
 	img
-		width 100%
 		img-border()
 	display flex
 	
 .service-head-left-text
 	padding 20px
+	margin-bottom 20px
 	p
 		font-weight 400
 		font-size 14px
@@ -1882,6 +1935,7 @@ li.r-tabs-state-active
 .service-head-left-title
 	font-size 26px
 	font-weight 500
+	margin-bottom 20px
 //.service-head-right
 .service-head-right-block
 	+below(960px)
@@ -1967,7 +2021,8 @@ li.r-tabs-state-active
 			a
 				color white
 	.r-tabs-nav
-		max-width 240px
+		li
+			max-width 345px!important
 	display flex
 	li.r-tabs-state-active
 		&:before
@@ -2019,6 +2074,8 @@ li.r-tabs-state-active
 //.header-slogan
 	
 .header-slogan-text
+	font-family: 'Izhitsa', arial;
+	font-size 19px
 	+below(1100px)
 		margin-top 20px
 	text-align center
@@ -2030,7 +2087,7 @@ li.r-tabs-state-active
 .header-slogan-bot-el
 	flex(mid)
 	font-size 12px
-	max-width 200px
+	max-width 210px
 	margin-top 15px
 	margin-right 5px
 	img
@@ -2078,6 +2135,7 @@ li.r-tabs-state-active
 	img
 		margin-right 20px
 	span
+		width 100%
 		color red
 		font-size 24px
 		font-weight 500
@@ -2194,3 +2252,31 @@ li.r-tabs-state-active
 	left: -20px;
 	background-position: 0 -90px;
 }
+
+
+.content-text,
+.about-head-left-text,
+.garant-rewiev-items-review,
+.service-head-left-text p,
+.advant-items-red-text,
+.advant-items-green-text,
+.garant-head-left-text p,
+.garant-item-text,
+.catalog-head-left-text p,
+.service-tab-text,
+.works-tab-text
+{
+	font-family Times new roman
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+	.r-tabs-nav{
+			width 100%
+	}
+
+
+.fancybox-next
+	width 80%
+
+.fancybox-prev
+	width 20%

@@ -44,16 +44,16 @@ $('.main-menu-toggle').click(function(){
     navigationText : ["<i class='fa fa-angle-left '></i>","<i class='fa fa-angle-right '></i>"],
 	 	}
 	 );
-	 $(".catalog-main-el-top-left").owlCarousel({
-	 	items : 1,
-	 	autoHeight : true,
-	 	pagination : false,
-	 	autoPlay : false,
-	 	singleItem:true,
-	 	navigation : true,
-    navigationText : ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
-	 	}
-	 ); 
+	 // $(".catalog-main-el-top-left").owlCarousel({
+	 // 	items : 1,
+	 // 	autoHeight : true,
+	 // 	pagination : false,
+	 // 	autoPlay : false,
+	 // 	singleItem:true,
+	 // 	navigation : true,
+  //   navigationText : ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+	 // 	}
+	 // ); 
 	 
 	 $(".garant-rewiev").owlCarousel({
 	 		items : 1,
@@ -181,7 +181,7 @@ var $tabs = $('#horizontalTab');
         startCollapsed: 'accordion',
         collapsible: 'accordion',
         setHash: true,
-        active: 1
+        active: 0
         
     });
 
@@ -197,7 +197,7 @@ var $tabs = $('.service-tab-left-vertical');
 
 	/* ###### init validate form  ######*/
 	/* ###### bower i jquery-validation ######*/
-	/*$('#myform').validate({
+$('#validateform').validate({
 			rules:{ //правила для полей 
 				name:{
 					required:true,
@@ -221,7 +221,7 @@ var $tabs = $('.service-tab-left-vertical');
 					alert('Форма заполнена правильно');
 				}
 			}
-	})*/
+	})
 
 	/* ###### init animatedModal  ######*/
 	/* ###### bower i animatedModa  ######*/
