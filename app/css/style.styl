@@ -279,7 +279,8 @@ ul
 	color: #333333;
 	width 140px
 .main-baner-house
-	width 100%
+	+below(640px)
+		width 100%!important
 	max-height 285px
 .main-baner-right
 	col(1/2)
@@ -2281,3 +2282,23 @@ li.r-tabs-state-active
 .fancybox-prev
 	width 20%
 	
+a[href^=tel]{
+    color: #000;
+}
+
+@media only screen and (max-width: 420px) {
+    .calc-popup{
+    	width: 90%;
+    }
+
+    .calc-row{
+        flex-wrap: wrap;
+    }
+    [id*="tab"]{
+        width: 100%;
+    }
+    #calc_form>span {
+        background: rgba(7, 7, 7, 0.3);
+        border-radius: 0;
+    }
+}
