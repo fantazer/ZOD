@@ -154,7 +154,7 @@ ul
 	a
 		+below(1200px)
 			font-size 12px
-		+below(1000px)
+		+below(1020px)
 			font-size 10px
 		+below(780px)
 			font-size 18px
@@ -419,6 +419,7 @@ ul
 	+below(400px)
 		display flex
 		col(1)
+		margin 30px
 	
 	height 535px
 	bgi('baner-sale.png')
@@ -804,6 +805,8 @@ ul
 	margin-bottom 30px
 	margin-top 15px
 	position relative
+	+below(420px)
+		margin-left 10px !important
 	img 
 		position absolute
 		left 100px
@@ -984,6 +987,9 @@ ul
 		img
 			width 100%
 			max-height inherit
+	+below(420px)
+		img
+			width 100%!important
 	col(0.60)
 	
 .catalog-main-el-top-right
@@ -1308,6 +1314,8 @@ ul
 		flex-wrap wrap
 		img
 			width auto!important
+			margin-bottom 20px
+		justify-content center
 	img
 		img-border()
 	display flex
@@ -1395,7 +1403,7 @@ ul
 	+below(950px)
 		font-size 16px
 	+below(550px)
-		font-size 26px	
+		font-size 16px	
 	font-size 20px
 	color white
 	font-weight 500
@@ -1447,6 +1455,8 @@ ul
 .garant-rewiev-items-head
 	display flex 
 	margin-bottom 15px
+	+below(420px)
+		width inherit
 .garant-rewiev-items-head-img
 	margin-right 20px 
 .garant-rewiev-items-head-text 
@@ -1604,6 +1614,8 @@ ul
 		col(1)
 		flex(mid)
 		margin-top 20px 
+	img
+		width 100%
 
 .about-title
 	font-size 22px
@@ -1653,6 +1665,8 @@ ul
 			margin-right 30px
 			margin-bottom 10px
 			position relative
+			+below(420px)
+				font-size 12px
 			&:after
 				content '/'
 				position absolute
@@ -1706,7 +1720,6 @@ ul
 	col(1/2)
 	img
 		width 100%
-		height 100%
 .works-right 
 	+below(650px)
 		col(1)
@@ -1853,6 +1866,10 @@ ul
 	padding 10px
 	border-radius 3px
 	border 1px solid green
+	+below(420px)
+		&:nth-child(1){
+			margin-left 0 !important
+		}
 	.fa
 		color green
 		font-size 22px
@@ -1919,8 +1936,14 @@ li.r-tabs-state-active
 		col(1)
 	+below(800px)
 		flex-wrap wrap
+		align-items: center;
+		justify-content: center;
+		flex-flow: column;
 		img
 			width auto!important
+	+below(420px)
+		img
+			width 100%!important
 	img
 		img-border()
 	display flex
@@ -2272,9 +2295,11 @@ li.r-tabs-state-active
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
 	.r-tabs-nav{
-			width 100%
+			width auto!important
 	}
-
+.menuarrow{
+		right 0px!important
+}
 
 .fancybox-next
 	width 80%
@@ -2301,4 +2326,8 @@ a[href^=tel]{
         background: rgba(7, 7, 7, 0.3);
         border-radius: 0;
     }
+}
+
+.garant-rewiev-height{
+	height 100%!important
 }
